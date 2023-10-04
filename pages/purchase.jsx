@@ -8,15 +8,14 @@ import PrivateRoute from '@/constants/PrivateRoute/PrivateRoute'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-    return (
-        <>
-            <PrivateRoute>
-
-                <Head>
-                    <title>Home</title>
-                </Head>
-                <HomePage />
-            </PrivateRoute>
-        </>
-    )
+  return (
+    <PrivateRoute>
+      <>
+        <Head>
+          <title>Purchase</title>
+        </Head>
+        <h1>Helloss</h1>
+      </>
+    </PrivateRoute>
+  )
 }
