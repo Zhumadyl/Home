@@ -1,13 +1,14 @@
-import i18n from '@/i18next/i18next'
-import React from 'react'
+import Header from "@/componets/header/Header";
+import i18n from "@/i18next/i18next";
+import React from "react";
 
 function HomePage() {
-    const { t } = i18n
+  const { t } = i18n;
   return (
-    <div>HomePage
-        <h1>{t("welcome")}</h1>
+    <div>
+      <Header />
     </div>
-  )
+  );
 }
 
-export default HomePage
+export default HomePage;
