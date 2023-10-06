@@ -41,7 +41,7 @@ export default function Header() {
   };
   function renderLinkList(linkData) {
     return (
-      <span>
+      <span className={scss.sale}>
         {linkData.map((link) => (
           <a key={link.url} href={link.url}>
             {link.text}
@@ -51,6 +51,35 @@ export default function Header() {
     );
   }
 
+  function renderDropList() {
+    return (
+      <span className={scss.navigate_text1}>
+        {url.map((link) => (
+          <a key={link.url} href={link.url}>
+            {link.text}
+          </a>
+        ))}
+      </span>
+    );
+  }
+
+  const renderDataSection = () => {
+    return (
+      <div className={scss.data}>
+        <div>
+          <div className={scss.solo}>{rental_type("Квартиры")}</div>
+          {renderLinkList(urlData)}
+          {search()}
+        </div>
+        <div className={scss.colorB}>{renderLinkList(urlData1)}</div>
+      </div>
+    );
+  };
+
+  const rental_type = (text) => {
+    return <span className={scss.rental_type}>{text}</span>;
+  };
+
   const navigationItems = [
     {
       label: "Аренда",
@@ -59,21 +88,13 @@ export default function Header() {
           text: (
             <span className={scss.navigate_text}>
               <span className={scss.navigate_text1}>
-                <span className={scss.rental_type}>Длительная аренда</span>
-                {url.map((link) => (
-                  <a key={link.url} href={link.url}>
-                    {link.text}
-                  </a>
-                ))}
+                {rental_type("Длительная аренда")}
+                {renderDropList()}
                 {search()}
               </span>
               <span className={scss.navigate_text1}>
-                <span className={scss.rental_type}>Посуточная аренда</span>
-                {url.map((link) => (
-                  <a key={link.url} href={link.url}>
-                    {link.text}
-                  </a>
-                ))}
+                {rental_type("Посуточная аренда")}
+                {renderDropList()}
               </span>
             </span>
           ),
@@ -84,15 +105,7 @@ export default function Header() {
       label: "Покупка",
       links: [
         {
-          text: (
-            <div className={scss.data}>
-              <div>
-                {renderLinkList(urlData)}
-                {search()}
-              </div>
-              {renderLinkList(urlData1)}
-            </div>
-          ),
+          text: <div className={scss.sale1}>{renderDataSection()}</div>,
         },
       ],
     },
@@ -100,15 +113,7 @@ export default function Header() {
       label: "Продажа",
       links: [
         {
-          text: (
-            <div className={scss.data}>
-              <div>
-                {renderLinkList(urlData)}
-                {search()}
-              </div>
-              {renderLinkList(urlData1)}
-            </div>
-          ),
+          text: <div>{renderDataSection()}</div>,
         },
       ],
     },
