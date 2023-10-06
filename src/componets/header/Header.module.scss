@@ -130,4 +130,27 @@
 }
 .data {
   display: flex;
+  gap: 70px;
+  .solo {
+    padding-bottom: 15px;
+  }
+}
+.like {
+  h3 {
+    color: $color-blue;
+  }
+}
+.sale {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.colorB {
+  a {
+    color: var(--main-subtitles, #575656);
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
 }
