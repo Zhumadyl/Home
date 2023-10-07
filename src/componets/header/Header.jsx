@@ -123,7 +123,7 @@ export default function Header() {
     <header className={scss.header}>
       <div className={scss.left}>
         <div className={scss.logo}>
-          <img src="/Logo.svg" alt="Logo" />
+          <img src="./assets/images/Logo.svg" alt="Logo" />
           <div className={scss.line}></div>
         </div>
         <div className={scss.navigate}>

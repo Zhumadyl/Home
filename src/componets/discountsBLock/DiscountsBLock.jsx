@@ -1,33 +1,41 @@
 import React from "react";
 import scss from "./DiscountsBLock.module.scss";
 import CardDiscout from "../cardDiscount/CardDiscout";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import "react-responsive-carousel/lib/styles/carousel.css";
-import { Carousel } from "react-responsive-carousel";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
 
 function DiscountsBLock() {
+  const responsive = {
+    0: {
+      items: 1,
+    },
+  };
   return (
     <div className={scss.discountsBLock}>
       <h1>Акции и скидки на новостройки</h1>
-      <Carousel
-        infiniteLoop={true}
-        showStatus={false}
-        showIndicators={false}
-        className={scss.carousel}
+      <AliceCarousel
+        autoPlay
+        autoPlayInterval={2000}
+        buttonsDisabled={true}
+        responsive={responsive}
+        infinite={true}
       >
         <div className={scss.cards}>
-          <CardDiscout text="Terraguard" logo="./logoterra.png" />{" "}
-          <CardDiscout text="Primex " logo="./logo primex.png" />{" "}
-          <CardDiscout text="Starforge" logo="./logo star.png" />{" "}
-          <CardDiscout text="ProBuilding" logo="./logo pro.png" />{" "}
+          <CardDiscout text="Terraguard" logo="./assets/images/logoterra.png" />{" "}
+          <CardDiscout text="Primex " logo="./assets/images/logo primex.png" />{" "}
+          <CardDiscout text="Starforge" logo="./assets/images/logo star.png" />{" "}
+          <CardDiscout text="ProBuilding" logo="./assets/images/logo pro.png" />{" "}
         </div>
         <div className={scss.cards}>
-          <CardDiscout text="Terraguard" logo="./logoterra.png" />{" "}
-          <CardDiscout text="Terraguard" logo="./logo primex.png" />{" "}
-          <CardDiscout text="Terraguard" logo="./logo star.png" />{" "}
-          <CardDiscout text="Terraguard" logo="./logo pro.png" />{" "}
+          <CardDiscout text="Terraguard" logo="./assets/images/logoterra.png" />{" "}
+          <CardDiscout
+            text="Terraguard"
+            logo="./assets/images/logo primex.png"
+          />{" "}
+          <CardDiscout text="Terraguard" logo="./assets/images/logo star.png" />{" "}
+          <CardDiscout text="Terraguard" logo="./assets/images/logo pro.png" />{" "}
         </div>
-      </Carousel>
+      </AliceCarousel>
     </div>
   );
 }
