@@ -27,70 +27,22 @@ function RieltorsBLock() {
         </div>
         <div className={scss.rieltor}>
           <div>
-            <CardRieltors
-              img="./assets/images/avatar.png"
-              title="Ольга Алексеевна"
-              text="Риелтор стаж 5 лет"
-            />{" "}
-            <CardRieltors
-              img="./assets/images/avatar.png"
-              title="Ольга Алексеевна"
-              text="Риелтор стаж 5 лет"
-            />{" "}
-            <CardRieltors
-              img="./assets/images/avatar.png"
-              title="Ольга Алексеевна"
-              text="Риелтор стаж 5 лет"
-            />{" "}
-            <CardRieltors
-              img="./assets/images/avatar.png"
-              title="Ольга Алексеевна"
-              text="Риелтор стаж 5 лет"
-            />{" "}
+            {card()}
+            {card()}
+            {card()}
+            {card()}
           </div>
           <div>
-            <CardRieltors
-              img="./assets/images/avatar.png"
-              title="Ольга Алексеевна"
-              text="Риелтор стаж 5 лет"
-            />{" "}
-            <CardRieltors
-              img="./assets/images/avatar.png"
-              title="Ольга Алексеевна"
-              text="Риелтор стаж 5 лет"
-            />{" "}
-            <CardRieltors
-              img="./assets/images/avatar.png"
-              title="Ольга Алексеевна"
-              text="Риелтор стаж 5 лет"
-            />{" "}
-            <CardRieltors
-              img="./assets/images/avatar.png"
-              title="Ольга Алексеевна"
-              text="Риелтор стаж 5 лет"
-            />{" "}
+            {card()}
+            {card()}
+            {card()}
+            {card()}
           </div>
           <div>
-            <CardRieltors
-              img="./assets/images/avatar.png"
-              title="Ольга Алексеевна"
-              text="Риелтор стаж 5 лет"
-            />{" "}
-            <CardRieltors
-              img="./assets/images/avatar.png"
-              title="Ольга Алексеевна"
-              text="Риелтор стаж 5 лет"
-            />{" "}
-            <CardRieltors
-              img="./assets/images/avatar.png"
-              title="Ольга Алексеевна"
-              text="Риелтор стаж 5 лет"
-            />{" "}
-            <CardRieltors
-              img="./assets/images/avatar.png"
-              title="Ольга Алексеевна"
-              text="Риелтор стаж 5 лет"
-            />
+            {card()}
+            {card()}
+            {card()}
+            {card()}
           </div>
         </div>
       </div>
