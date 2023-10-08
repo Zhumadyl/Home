@@ -1,6 +1,6 @@
 import React from "react";
 import scss from "./ServicesBLock.module.scss";
-import CardServices from "../servicesCard/CardServices";
+import CardServices from "../cardServices/CardServices";
 
 function ServicesBlock() {
   return (
