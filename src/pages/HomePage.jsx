@@ -1,3 +1,4 @@
+import Main from "@/componets/Main/Main";
 import Footer from "@/componets/footer/Footer";
 import Header from "@/componets/header/Header";
 import i18n from "@/i18next/i18next";
@@ -8,6 +9,7 @@ function HomePage() {
   return (
     <div>
       <Header />
+      <Main/>
       <Footer/>
     </div>
   );
