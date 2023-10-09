@@ -1,3 +1,4 @@
+import Main from "@/componets/Main/Main";
 import DiscountsBLock from "@/componets/discountsBLock/DiscountsBLock";
 import Footer from "@/componets/footer/Footer";
 import Header from "@/componets/header/Header";
@@ -11,10 +12,10 @@ function HomePage() {
   return (
     <div>
       <Header />
+      <Main/>
       <DiscountsBLock />
       <RieltorsBLock />
       <ServicesBlock />
-      {/* <Footer/> */}
     </div>
   );
 }
