@@ -11,3 +11,12 @@
   display: flex;
   gap: 20px;
 }
+
+@media (max-width: 576px), (max-width: 900px) {
+  .discountsBLock {
+    padding: 20px;
+    h1 {
+      font-size: 18px;
+    }
+  }
+}

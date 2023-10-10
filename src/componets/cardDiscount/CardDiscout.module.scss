@@ -59,9 +59,12 @@
     }
   }
   .logo {
-    background: url(/Logo.png);
+    background: url(/assets/images/Logo.png);
     width: 127px;
     height: 72px;
     flex-shrink: 0;
+  }
+  img {
+    padding: 10px 20px;
   }
 }

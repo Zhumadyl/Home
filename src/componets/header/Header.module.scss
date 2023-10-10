@@ -154,3 +154,32 @@
     line-height: normal;
   }
 }
+.BurgerMenu {
+  display: none;
+}
+@media (max-width: 576px), (max-width: 900px) {
+  .navigate {
+    display: none;
+  }
+  .right {
+    display: none;
+  }
+  .line {
+    display: none;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  .BurgerMenu {
+    display: block;
+  }
+}
+@media (max-width: 1300px) {
+  .line {
+    display: none;
+  }
+  .left {
+    gap: 40px;
+  }
+}

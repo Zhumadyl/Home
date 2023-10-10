@@ -12,8 +12,8 @@ function HomePage() {
     <div>
       <Header />
       <DiscountsBLock />
-      <RieltorsBLock />
-      <ServicesBlock />
+      {/* <RieltorsBLock /> */}
+      {/* <ServicesBlock /> */}
       {/* <Footer/> */}
     </div>
   );

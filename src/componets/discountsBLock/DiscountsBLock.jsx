@@ -6,9 +6,19 @@ import "react-alice-carousel/lib/alice-carousel.css";
 
 function DiscountsBLock() {
   const responsive = {
-    0: {
-      items: 1,
-    },
+    0: { items: 1 },
+    576: { items: 1 },
+    768: { items: 2 },
+    992: { items: 3 },
+    1300: { items: 4 },
+  };
+
+  const cards = (text, logo) => {
+    return (
+      <div className={scss.cards}>
+        <CardDiscout text={text} logo={logo} />
+      </div>
+    );
   };
   return (
     <div className={scss.discountsBLock}>
@@ -20,21 +30,10 @@ function DiscountsBLock() {
         responsive={responsive}
         infinite={true}
       >
-        <div className={scss.cards}>
-          <CardDiscout text="Terraguard" logo="./assets/images/logoterra.png" />{" "}
-          <CardDiscout text="Primex " logo="./assets/images/logo primex.png" />{" "}
-          <CardDiscout text="Starforge" logo="./assets/images/logo star.png" />{" "}
-          <CardDiscout text="ProBuilding" logo="./assets/images/logo pro.png" />{" "}
-        </div>
-        <div className={scss.cards}>
-          <CardDiscout text="Terraguard" logo="./assets/images/logoterra.png" />{" "}
-          <CardDiscout
-            text="Terraguard"
-            logo="./assets/images/logo primex.png"
-          />{" "}
-          <CardDiscout text="Terraguard" logo="./assets/images/logo star.png" />{" "}
-          <CardDiscout text="Terraguard" logo="./assets/images/logo pro.png" />{" "}
-        </div>
+        {cards("Terraguard", "./assets/images/logoterra.png")}
+        {cards("Primex", "./assets/images/logo primex.png")}
+        {cards("Starforge", "./assets/images/logo star.png")}
+        {cards("ProBuilding", "./assets/images/logo pro.png")}
       </AliceCarousel>
     </div>
   );
