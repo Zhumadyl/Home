@@ -1,5 +1,3 @@
-@import "react-alice-carousel/lib/scss/alice-carousel.scss";
-
 .discountsBLock {
   padding: 40px 88px;
   display: flex;
@@ -11,6 +9,22 @@
   display: flex;
   gap: 20px;
 }
+.slider {
+  display: flex;
+}
+.custom-prev-arrow,
+.custom-next-arrow {
+  position: absolute;
+}
+.custom-prev-arrow {
+  z-index: 1000;
+  top: 36%;
+  right: 98%;
+}
+.custom-next-arrow {
+  top: 36%;
+  left: 95%;
+}
 
 @media (max-width: 576px), (max-width: 900px) {
   .discountsBLock {
@@ -18,5 +32,11 @@
     h1 {
       font-size: 18px;
     }
+  }
+  .custom-prev-arrow {
+    right: 94%;
+  }
+  .custom-next-arrow {
+    left: 92%;
   }
 }

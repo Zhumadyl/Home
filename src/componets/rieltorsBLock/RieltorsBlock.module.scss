@@ -33,8 +33,24 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  div{
+  div {
     display: flex;
     gap: 30px;
+  }
+}
+@media (max-width: 576px) {
+  .block {
+    padding: 20px;
+  }
+  .rieltor {
+    overflow: auto;
+  }
+  .title {
+    h1 {
+      font-size: 18px;
+    }
+    div {
+      display: none;
+    }
   }
 }
