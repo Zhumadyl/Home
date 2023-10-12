@@ -1,6 +1,8 @@
 @import "@/styles/variables.scss";
 
 .cardDiscout {
+  width: 308px;
+  height: 173px;
   flex-shrink: 0;
   border-radius: 3px;
   background: var(--main-white, #fff);
@@ -66,5 +68,10 @@
   }
   img {
     padding: 10px 20px;
+  }
+}
+@media(max-width:1200px){
+  .cardDiscout{
+    width: 100%;
   }
 }

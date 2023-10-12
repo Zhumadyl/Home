@@ -38,7 +38,7 @@
     gap: 30px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 576px), (max-width:1300px) {
   .block {
     padding: 20px;
   }

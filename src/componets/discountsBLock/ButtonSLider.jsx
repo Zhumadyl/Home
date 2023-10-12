@@ -1,5 +1,5 @@
 import React from "react";
-import scss from "./DiscountsBlock.module.scss";
+import scss from "./DiscountsBLock.module.scss";
 
 const CustomPrevArrow = (props) => (
   <div className={scss["custom-prev-arrow"]} onClick={props.onClick}>

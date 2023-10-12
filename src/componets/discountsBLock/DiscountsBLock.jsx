@@ -41,7 +41,7 @@ function DiscountsBLock() {
         },
       },
       {
-        breakpoint: 576,
+        breakpoint: 776,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
