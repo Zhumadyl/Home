@@ -159,7 +159,7 @@ export default function Header() {
           <a href="/">Застройщики</a>
         </div>
       </div>
-      <Link href="/loginPage">
+      <Link href="/login">
         <div className={scss.right}>
           <button className={scss.btn}>Войти</button>
         </div>

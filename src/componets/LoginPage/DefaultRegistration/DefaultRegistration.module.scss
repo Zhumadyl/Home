@@ -1,0 +1,102 @@
+@import "@/styles/variables.scss";
+
+.defaultRegistration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 85px;
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    div {
+      margin-top: 5px;
+    }
+  }
+  h1 {
+    color: $color-blue;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 30px;
+  }
+  label {
+    color: $color-575656;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 125% */
+  }
+  input {
+    width: 386px;
+    height: 55px;
+    flex-shrink: 0;
+    border-radius: 3px;
+    border: 0.621px solid #575656;
+    background: #fff;
+  }
+  input::placeholder {
+    color: $color-d7d7d7;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .btn1,
+  .btn2 {
+    width: 386px;
+    height: 55px;
+    flex-shrink: 0;
+  }
+  .btn1 {
+    border-radius: 3px;
+    border: 0.621px solid $color-blue;
+    background: $color-blue;
+    color: $color-white;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .btn2 {
+    border-radius: 3px;
+    border: 1px solid $color-blue;
+    background: $color-white;
+    color: $color-blue;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  input[type="text"],
+  [type="number"],
+  [type="email"] {
+    text-indent: 16px;
+  }
+}
+.btns {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  p {
+    color: $color-575656;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .btn2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+}
