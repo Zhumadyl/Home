@@ -16,6 +16,7 @@ function HomePage() {
       <DiscountsBLock />
       <RieltorsBLock />
       <ServicesBlock />
+      {/* <Footer/> */}
     </div>
   );
 }

@@ -8,9 +8,18 @@
   form {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 15px;
     div {
       margin-top: 5px;
+    }
+    h4 {
+      color: $color-575656;
+      font-family: Montserrat;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      text-decoration-line: underline;
     }
   }
   h1 {
@@ -64,8 +73,7 @@
     line-height: normal;
   }
   input[type="text"],
-  [type="number"],
-  [type="email"] {
+  [type="password"] {
     text-indent: 16px;
   }
 }

@@ -1,10 +1,14 @@
 // pages/login.js
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import HeaderLogin from "@/componets/HomePage/headerLogin/HeaderLogin";
+import DefaultLogin from "@/componets/LoginPage/DefaultLogin/DefaultLogin";
 import DefaultRegistration from "@/componets/LoginPage/DefaultRegistration/DefaultRegistration";
+import TelephoneAutorization from "@/componets/LoginPage/TelephoneAutorization/TelephoneAutorization";
 
 function Login() {
+  const [currentStep, setCurrentStep] = useState("login");
+
   const router = useRouter();
   const isAuthenticated = false;
 
@@ -20,10 +24,28 @@ function Login() {
   }
 
   // Render the login form for unauthenticated users
+  const renderStep = () => {
+    switch (currentStep) {
+      case "login":
+        return (
+          <DefaultLogin onRegisterClick={() => setCurrentStep("register")} />
+        );
+      case "register":
+        return (
+          <DefaultRegistration onBackClick={() => setCurrentStep("login")} />
+        );
+      // Добавьте другие этапы входа по мере необходимости
+      default:
+        return (
+          <DefaultLogin onRegisterClick={() => setCurrentStep("register")} />
+        );
+    }
+  };
   return (
     <div>
       <HeaderLogin />
-      <DefaultRegistration/>
+      <TelephoneAutorization />
+      {/* {renderStep()} */}
     </div>
   );
 }

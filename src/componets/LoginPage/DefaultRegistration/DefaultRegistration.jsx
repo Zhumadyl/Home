@@ -1,12 +1,16 @@
 import React from "react";
 import scss from "./DefaultRegistration.module.scss";
 import Link from "next/link";
+import Google from "../google/Google";
 
 function DefaultRegistration() {
+  const submit = (e) => {
+    e.preventDefault();
+  };
   return (
     <div className={scss.defaultRegistration}>
       <h1>Регистрация</h1>
-      <form>
+      <form onSubmit={submit}>
         <div className={scss.form}>
           <div>
             <label>Имя</label>
@@ -31,20 +35,14 @@ function DefaultRegistration() {
           />
         </div>
         <div className={scss.btns}>
-          <Link href="/">
+          <Link href="/TelephoneAutorization">
             <button className={scss.btn1}>Далее</button>
           </Link>
           <div>
-            <Link href="/">
-              <button className={scss.btn2}>
-                {" "}
-                <img src="/assets/images/logos_google-icon.png" alt="" />
-                Войти с Google
-              </button>
-            </Link>
+            <Google />
           </div>
-          <Link href="/">
-            <p>У вас уже есть учетная запись? Войти</p>
+          <Link href="/TelephoneAutorization">
+            <p>Еще нет учетной записи? Зарегистрируйся прямо сейчас!</p>
           </Link>
         </div>
       </form>
