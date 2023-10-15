@@ -1,0 +1,20 @@
+@import "@/styles/variables.scss";
+
+.btn2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 386px;
+  height: 55px;
+  flex-shrink: 0;
+  gap: 8px;
+  border-radius: 3px;
+  border: 1px solid $color-blue;
+  background: $color-white;
+  color: $color-blue;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}

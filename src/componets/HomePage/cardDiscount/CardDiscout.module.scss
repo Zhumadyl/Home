@@ -1,0 +1,77 @@
+@import "@/styles/variables.scss";
+
+.cardDiscout {
+  width: 308px;
+  height: 173px;
+  flex-shrink: 0;
+  border-radius: 3px;
+  background: var(--main-white, #fff);
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+  h1 {
+    color: $color-dark;
+    width: 163px;
+
+    /* Title 3 Medium */
+    font-family: Montserrat;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  h3 {
+    color: $color-dark;
+
+    /* Subtitle 3 Regular */
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    text-align: start;
+  }
+  p {
+    color: $color-575656;
+
+    /* Subtitle 3 Regular */
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .card_title {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 9px;
+  }
+  .cars_info {
+    display: flex;
+  }
+  .card_about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    p {
+      text-align: center;
+    }
+  }
+  .logo {
+    background: url(/assets/images/Logo.png);
+    width: 127px;
+    height: 72px;
+    flex-shrink: 0;
+  }
+  img {
+    padding: 10px 20px;
+  }
+}
+@media(max-width:1200px){
+  .cardDiscout{
+    width: 100%;
+  }
+}
