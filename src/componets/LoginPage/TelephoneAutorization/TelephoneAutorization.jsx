@@ -1,11 +1,12 @@
 import React from "react";
 import scss from "./TelephoneAutorization.module.scss";
 import Link from "next/link";
+import Title from "../title/Title";
 
 function TelephoneAutorization() {
   return (
     <div className={scss.telephoneAutorization}>
-      <h1>Введите 4-значный код </h1>
+      <Title title="Введите 4-значный код " />
       <p>Код</p>
       <div className={scss.cod}>
         <input type="number" maxLength="1" />

@@ -3,6 +3,7 @@ import scss from "./DefaultLogin.module.scss";
 import Link from "next/link";
 import Google from "../google/Google";
 import { useRouter } from "next/router";
+import Title from "../title/Title";
 
 function DefaultLogin() {
   const router = useRouter();
@@ -20,7 +21,7 @@ function DefaultLogin() {
 
   return (
     <div className={scss.defaultRegistration}>
-      <h1>Войти</h1>
+      <Title title="Войти" />
       <form onSubmit={submit}>
         <div className={scss.form}>
           <div>

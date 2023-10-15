@@ -2,6 +2,7 @@ import React from "react";
 import scss from "./DefaultRegistration.module.scss";
 import Link from "next/link";
 import Google from "../google/Google";
+import Title from "../title/Title";
 
 function DefaultRegistration() {
   const submit = (e) => {
@@ -9,7 +10,7 @@ function DefaultRegistration() {
   };
   return (
     <div className={scss.defaultRegistration}>
-      <h1>Регистрация</h1>
+      <Title title="Регистрация" />
       <form onSubmit={submit}>
         <div className={scss.form}>
           <div>

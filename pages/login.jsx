@@ -5,6 +5,8 @@ import HeaderLogin from "@/componets/HomePage/headerLogin/HeaderLogin";
 import DefaultLogin from "@/componets/LoginPage/DefaultLogin/DefaultLogin";
 import DefaultRegistration from "@/componets/LoginPage/DefaultRegistration/DefaultRegistration";
 import TelephoneAutorization from "@/componets/LoginPage/TelephoneAutorization/TelephoneAutorization";
+import GoogleAutorization from "@/componets/LoginPage/googleAutorization/GoogleAutorization";
+import PasswordAutorization from "@/componets/LoginPage/passwordAutorization/PasswordAutorization";
 
 function Login() {
   const [currentStep, setCurrentStep] = useState("login");
@@ -44,7 +46,11 @@ function Login() {
   return (
     <div>
       <HeaderLogin />
-      <TelephoneAutorization />
+      {/* <DefaultLogin /> */}
+      {/* <DefaultRegistration /> */}
+      {/* <GoogleAutorization /> */}
+      {/* <TelephoneAutorization /> */}
+      <PasswordAutorization />
       {/* {renderStep()} */}
     </div>
   );
