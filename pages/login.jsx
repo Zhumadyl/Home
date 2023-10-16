@@ -45,13 +45,13 @@ function Login() {
   };
   return (
     <div>
-      <HeaderLogin />
-      {/* <DefaultLogin /> */}
-      {/* <DefaultRegistration /> */}
-      {/* <GoogleAutorization /> */}
-      {/* <TelephoneAutorization /> */}
+      {/* <HeaderLogin /> */}
+      <DefaultLogin />
+      <DefaultRegistration />
+      <GoogleAutorization />
+      <TelephoneAutorization />
       <PasswordAutorization />
-      {/* {renderStep()} */}
+      {renderStep()}
     </div>
   );
 }

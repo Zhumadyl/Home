@@ -40,3 +40,11 @@
     left: 92%;
   }
 }
+@media (max-width:900px) {
+  .custom-next-arrow, .custom-prev-arrow {
+    display: none;
+  }
+  .discountsBLock{
+    gap: 18px;
+  }
+}

@@ -1,4 +1,6 @@
 .servicesBlock {
+  background-color: #F9F9FB;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -10,6 +12,7 @@
 }
 @media (max-width: 1300px) {
   .servicesBlock {
+    background-color: white;
     padding: 20px;
     h1 {
       font-size: 20px;

@@ -10,9 +10,11 @@
 .footer{
     @extend %flex-column;
     gap: 30px;
+    margin-top: 45px;
 }
 .footerTopDiv{
     margin: auto 80px;
+    padding: 50px 0 0 0 ;
     display: flex;
     justify-content: space-between;
 }
@@ -80,6 +82,7 @@
 }
 .footerBottomDiv{
     margin: auto 80px;
+    padding: 0 0 30px 0;
     display: flex;
     justify-content: space-between;
     span{
@@ -89,5 +92,40 @@
         line-height: 16px;
         letter-spacing: 0em;
         text-align: left;
+    }
+}
+@media(max-width:576px){
+    .footer{
+        >div{
+            margin: 0 30px;
+            flex-direction: column;
+        }
+        .leftDiv{
+            width: 100%;
+            p{
+                line-height: 18px;
+                font-size: 12px;
+            }
+            div:nth-child(2){
+                gap: 10px;
+            }
+        }
+        .rightDiv{
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 20px;
+            >div{
+                width: 60%;
+            }
+        }
+        .footerBottomDiv{
+            
+            span:nth-child(2) {
+                display: none;
+            }
+        }
+        .line{
+            margin: 0;
+        }
     }
 }
