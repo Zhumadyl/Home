@@ -1,0 +1,62 @@
+@import "@/styles/variables.scss";
+
+.cardServices {
+  width: 400px;
+  height: 439px;
+  flex-shrink: 0;
+  border-radius: 3px;
+  background: var(--main-white, #fff);
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  h2 {
+    color: $color-blue;
+    text-align: center;
+
+    /* Title 1 Medium */
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  p {
+    width: 340px;
+    color: $color-dark;
+    text-align: center;
+
+    /* Subtitle 1 Regular */
+    font-family: Montserrat;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px; /* 135.294% */
+  }
+  button {
+    display: inline-flex;
+    padding: 15px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 3px;
+    border: 1px solid $color-blue;
+    color: $color-blue;
+    background-color: $color-white;
+
+    /* Button 2 Semibold */
+    font-family: Montserrat,sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
+@media (max-width: 1300px) {
+  .cardServices {
+    width: 100%;
+  }
+}

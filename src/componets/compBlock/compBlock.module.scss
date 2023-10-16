@@ -1,15 +1,16 @@
 @import "@/styles/variables.scss";
 
 
-%btn-font{
+%btn-font {
     color: $color-blue;
     cursor: pointer;
     background: none;
-    
-    
-    
+
+
+
 }
-%font-compBlock{
+
+%font-compBlock {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     letter-spacing: 0em;
@@ -17,86 +18,101 @@
 }
 
 
-.container{
+.container {
     margin: auto 80px;
     padding: 40px 0;
 }
-.compBlock{
-    background:$color-f9f9fb;   
-    width: 100%; 
-    >div{
+
+.compBlock {
+    background: $color-f9f9fb;
+    width: 100%;
+
+    >div {
         display: flex;
         flex-direction: column;
         gap: 30px;
     }
-    h2{
+
+    h2 {
         @extend %font-compBlock;
         font-size: 24px;
         font-weight: 600;
         line-height: 29px;
         color: $color-dark;
     }
-    .compTopDiv{
+
+    .compTopDiv {
         display: flex;
         justify-content: space-between;
-        a{
+
+        a {
             text-decoration: none;
         }
-        button{
-        @extend %font-compBlock;
 
-        @extend %btn-font;
-        border: none;
+        button {
+            @extend %font-compBlock;
+
+            @extend %btn-font;
+            border: none;
             display: flex;
             gap: 10px;
             font-size: 16px;
             line-height: 20px;
         }
     }
-    .compBottomDiv{
+
+    .compBottomDiv {
         display: flex;
         justify-content: space-between;
-        >div{
+
+        >div {
+            cursor: pointer;
             width: 292px;
             height: 379px;
             display: flex;
-            border-radius: 8px;
+            border-radius: 3px;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             flex-direction: column;
             position: relative;
-            >div:nth-child(1){
+
+            >div:nth-child(1) {
                 position: relative;
                 z-index: 1;
                 height: fit-content;
                 height: 199px;
-                img:nth-child(1){
+
+                img:nth-child(1) {
                     width: 100%;
-                    border-radius: 8px 8px 0 0 ;
+                    border-radius: 3px 3px 0 0;
                 }
-                img:nth-child(2){
+
+                img:nth-child(2) {
                     position: absolute;
                     left: 20px;
                     top: 20px;
                 }
             }
-            >div:nth-child(2){
+
+            >div:nth-child(2) {
                 position: absolute;
-                padding:15px;
+                padding: 15px;
                 display: flex;
                 flex-direction: column;
                 gap: 8px;
-                border-radius: 8px;
+                border-radius: 3px;
                 bottom: 0%;
                 right: 0%;
                 height: 185px;
                 background: $color-white;
                 z-index: 2;
-                .line{
+
+                .line {
                     width: 37px;
                     height: 0px;
                     border: 1px solid $color-d7d7d7;
                 }
-                button{
+
+                button {
                     @extend %font-compBlock;
                     @extend %btn-font;
                     height: 39px;
@@ -110,11 +126,28 @@
     }
 }
 
-@media(max-width:576px){
-    .compBlock{
-        overflow: scroll;
-        >div{
-            width: 370%;
+@media(max-width:576px) {
+    .compBlock {
+        background-color: $color-white;
+        overflow-x: hidden;
+        padding-bottom: 20px;
+        margin-bottom: -50px;
+
+        >div {
+            width: 315%;
         }
+
+        h2 {
+            font-family: Montserrat, sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+    }
+
+    .container {
+        margin: 0px 0px 0px 20px;
+        padding: 0;
     }
 }

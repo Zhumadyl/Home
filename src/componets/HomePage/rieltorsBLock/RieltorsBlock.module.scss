@@ -1,0 +1,60 @@
+@import "@/styles/variables.scss";
+
+.block {
+  padding: 40px 88px;
+}
+.rieltorsBLock {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  div {
+    display: flex;
+    gap: 10px;
+  }
+  p {
+    color: $color-blue;
+
+    /* Button 1 Semibold */
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+.rieltor {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  div {
+    display: flex;
+    gap: 32px;
+  }
+}
+@media (max-width: 576px), (max-width:1300px) {
+  .block {
+    padding: 20px 0px 0px 20px;
+  }
+  .rieltor {
+    overflow: auto;
+    
+    div{
+      gap: 16px;
+    }
+  }
+  .title {
+    h1 {
+      font-size: 18px;
+    }
+    div {
+      display: none;
+    }
+  }
+}

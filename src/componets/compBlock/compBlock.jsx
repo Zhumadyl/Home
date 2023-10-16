@@ -58,8 +58,6 @@ function CompBlock() {
                 <button>Перейти на сайт компании</button>
               </div>
             </div>
-
-
           </div>
         </div>
 

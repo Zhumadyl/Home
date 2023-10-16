@@ -10,6 +10,7 @@
 .footer{
     @extend %flex-column;
     gap: 30px;
+    margin-top: 45px;
 }
 .footerTopDiv{
     margin: auto 80px;
@@ -38,7 +39,6 @@
         font-size: 14px;
         font-weight: 500;
         line-height: 22px;
-        letter-spacing: 0em;
         text-align: left;
     }
 

@@ -1,0 +1,75 @@
+@import "@/styles/variables.scss";
+
+.telephoneAutorization {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 158px;
+  gap: 25px;
+  h1 {
+    color: $color-blue;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  p {
+    color: $color-575656;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .cod {
+    display: flex;
+    gap: 25px;
+  }
+  input {
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+    border-radius: 3px;
+    border: 0.621px solid $color-575656;
+    background: $color-white;
+  }
+  input[type="number"] {
+    padding-left: 20px;
+    font-size: 20px;
+  }
+}
+.btns {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.btn1,
+.btn2 {
+  width: 386px;
+  height: 55px;
+  flex-shrink: 0;
+  border-radius: 3px;
+}
+
+.btn1 {
+  color: $color-white;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border: 0.621px solid $color-blue;
+  background: $color-blue;
+}
+.btn2 {
+  color: $color-blue;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border: 1px solid $color-blue;
+  background: $color-white;
+}

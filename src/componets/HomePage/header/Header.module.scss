@@ -1,11 +1,14 @@
 @import "@/styles/variables.scss";
 
 .header {
-  margin: 30px;
+  padding: 12px 33px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: var(--main-white, #FFF);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
 }
+
 .left {
   display: flex;
   width: 50%;
@@ -23,18 +26,23 @@
     line-height: normal;
     text-decoration: none;
   }
+
   a:hover {
     color: $color-blue;
   }
 }
+
 .navigate {
   display: flex;
   gap: 30px;
 }
+
 .logo {
   display: flex;
   gap: 30px;
+  cursor: pointer;
 }
+
 .btn {
   display: inline-flex;
   padding: 10px 35px;
@@ -45,6 +53,7 @@
   border: none;
   background-color: $color-blue;
   color: $color-white;
+  cursor: pointer;
 
   /* Button 1 Semibold */
   font-family: Montserrat;
@@ -53,6 +62,7 @@
   font-weight: 600;
   line-height: normal;
 }
+
 .line {
   width: 1px;
   height: 30px;
@@ -74,6 +84,7 @@
   background: #fff;
   box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.25),
     -2px -2px 6px 0px rgba(0, 0, 0, 0.25);
+
   a {
     display: block;
     text-decoration: none;
@@ -91,6 +102,7 @@
   line-height: normal;
   padding-bottom: 10px;
 }
+
 .navigate_text {
   display: flex;
   justify-content: space-between;
@@ -100,6 +112,7 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+
   h3 {
     color: #407bff;
     font-family: Montserrat;
@@ -109,10 +122,12 @@
     line-height: normal;
   }
 }
+
 .search {
   display: flex;
   align-items: center;
   gap: 5px;
+
   a {
     color: #407bff;
     font-family: Montserrat;
@@ -122,29 +137,35 @@
     line-height: normal;
   }
 }
+
 .line1 {
   margin: 20px 0px;
   width: 211px;
   height: 1px;
   background-color: $color-d7d7d7;
 }
+
 .data {
   display: flex;
   gap: 70px;
+
   .solo {
     padding-bottom: 15px;
   }
 }
+
 .like {
   h3 {
     color: $color-blue;
   }
 }
+
 .sale {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+
 .colorB {
   a {
     color: var(--main-subtitles, #575656);
@@ -154,3 +175,36 @@
     line-height: normal;
   }
 }
+.BurgerMenu {
+  display: none;
+}
+@media (max-width: 576px), (max-width: 900px) {
+  .header{
+    padding: 23px 20px;
+  }
+  .navigate {
+    display: none;
+  }
+  .right {
+    display: none;
+  }
+  .line {
+    display: none;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  .BurgerMenu {
+    display: block;
+  }
+}
+@media (max-width: 1300px) {
+  .line {
+    display: none;
+  }
+  .left {
+    gap: 40px;
+  }
+}
+

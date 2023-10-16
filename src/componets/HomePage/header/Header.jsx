@@ -1,5 +1,7 @@
 import { useState } from "react";
 import scss from "./Header.module.scss";
+import Link from "next/link";
+import BurgerMenu from "../burgerMenu/BurgerMenu";
 
 export default function Header() {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -123,7 +125,10 @@ export default function Header() {
     <header className={scss.header}>
       <div className={scss.left}>
         <div className={scss.logo}>
-          <img src="/Logo.svg" alt="Logo" />
+          <img src="./assets/images/Logo.svg" alt="Logo" />
+          <div className={scss.BurgerMenu}>
+            <BurgerMenu />
+          </div>
           <div className={scss.line}></div>
         </div>
         <div className={scss.navigate}>
@@ -154,9 +159,11 @@ export default function Header() {
           <a href="/">Застройщики</a>
         </div>
       </div>
-      <div className={scss.right}>
-        <button className={scss.btn}>Войти</button>
-      </div>
+      <Link href="/login">
+        <div className={scss.right}>
+          <button className={scss.btn}>Войти</button>
+        </div>
+      </Link>
     </header>
   );
 }
