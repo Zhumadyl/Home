@@ -35,15 +35,19 @@
   gap: 20px;
   div {
     display: flex;
-    gap: 30px;
+    gap: 32px;
   }
 }
 @media (max-width: 576px), (max-width:1300px) {
   .block {
-    padding: 20px;
+    padding: 20px 0px 0px 20px;
   }
   .rieltor {
     overflow: auto;
+    
+    div{
+      gap: 16px;
+    }
   }
   .title {
     h1 {

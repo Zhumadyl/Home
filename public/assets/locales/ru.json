@@ -1,3 +1,21 @@
 {
-    "welcome": "Добро пожаловать в мое приложение!"
-  }
+  "rent": "Аренда",
+  "buy": "Покупка",
+  "sell": "Продажа",
+  "searchByMap": "Поиск по карте",
+  "placeAd": "Разместить объявление",
+  "apartments": "Квартиры",
+  "rooms": "Комнаты",
+  "houses": "Дома",
+  "townhousesAndCottages": "Таунхаусы и коттеджи",
+  "newlyBuiltApartments": "Квартиры в новостройках",
+  "secondHandApartments": "Квартиры во вторичках",
+  "roomsAndShares": "Комнаты и доли",
+  "houses": "Дома",
+  "townhousesAndCottages": "Таунхаусы и коттеджи",
+  "dachas": "Дачи",
+  "plots": "Участки",
+  "realtors": "Риелторы",
+  "developers": "Застройщики",
+  "login": "Войти"
+}

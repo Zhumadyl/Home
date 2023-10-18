@@ -1,3 +1,21 @@
 {
-    "welcome": "Welcome to my app!"
-  }
+  "rent": "Rent",
+  "buy": "Purchase",
+  "sell": "Sells",
+  "searchByMap": "Search by Map",
+  "placeAd": "Place an Ad",
+  "apartments": "Apartments",
+  "rooms": "Rooms",
+  "houses": "Houses",
+  "townhousesAndCottages": "Townhouses and Cottages",
+  "newlyBuiltApartments": "Newly Built Apartments",
+  "secondHandApartments": "Second-Hand Apartments",
+  "roomsAndShares": "Rooms and Shares",
+  "houses": "Houses",
+  "townhousesAndCottages": "Townhouses and Cottages",
+  "dachas": "Dachas",
+  "plots": "Plots",
+  "realtors": "Realtors",
+  "developers": "Developers",
+  "login": "Log In"
+}
