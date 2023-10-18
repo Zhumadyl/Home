@@ -1,3 +1,14 @@
-{
-    "welcome": "Welcome to my app!"
+[
+  {
+    "ru": {
+      "rent": "Аренда",
+      "buy":"Покупка",
+      "sell":"Продажа"
+    },
+    "en": {
+      "rent": "Rent",
+      "buy":"Purchase",
+      "sell":"Sells"
+    }
   }
+]
