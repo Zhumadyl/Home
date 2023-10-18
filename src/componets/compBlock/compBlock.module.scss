@@ -131,11 +131,10 @@
         background-color: $color-white;
         overflow-x: hidden;
         padding-bottom: 20px;
-
+      
         >div {
             width: 315%;
         }
-
         h2 {
             font-family: Montserrat, sans-serif;
             font-size: 18px;
@@ -146,7 +145,7 @@
     }
 
     .container {
-        margin: 0px 0px 0px 20px;
+        margin: 0px 20px;
         padding: 0;
     }
 }
