@@ -6,19 +6,15 @@ import { useTranslation } from "react-i18next";
 import ReactSwitch from "react-switch";
 
 export default function Header() {
-  const { t, i18n } = useTranslation(); // Initialize the t function for translations and i18n for language switching
+  const { t, i18n } = useTranslation();
 
-  const [isChecked, setIsChecked] = useState(i18n.language === "ru"); // Изначально устанавливаем состояние переключателя в зависимости от текущего языка
+  const [isChecked, setIsChecked] = useState(i18n.language === "ru");
 
   const handleSwitchChange = (checked) => {
     setIsChecked(checked);
-    const newLanguage = checked ? "ru" : "en"; // Выбираем язык на основе состояния переключателя
-    i18n.changeLanguage(newLanguage); // Сменяем язык
+    const newLanguage = checked ? "ru" : "en";
+    i18n.changeLanguage(newLanguage);
   };
-
-  // const changeLanguage = (lng) => {
-  //   i18n.changeLanguage(lng); // Function to change the language
-  // };
   const [activeDropdown, setActiveDropdown] = useState(null);
 
   const toggleDropdown = (index) => {
@@ -147,12 +143,6 @@ export default function Header() {
           <div className={scss.line}></div>
         </div>
         <div className={scss.navigate}>
-          {/* <div className={scss.languageButtons}>
-            <button onClick={() => changeLanguage("ru")}>RU</button>{" "}
-     
-            <button onClick={() => changeLanguage("en")}>EN</button>{" "}
-
-          </div> */}
           {navigationItems.map((item, index) => (
             <div
               key={index}
@@ -185,8 +175,8 @@ export default function Header() {
         <ReactSwitch
           onChange={handleSwitchChange}
           checked={isChecked}
-          onColor="#407bff" // Цвет, когда включено
-          offColor="#000" // Цвет, когда выключено
+          onColor="#407bff"
+          offColor="#000"
           uncheckedIcon={false}
           checkedIcon={false}
           checkedHandleIcon={<div className={scss.switchLabel}>RU</div>}
