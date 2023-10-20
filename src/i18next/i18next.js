@@ -44,3 +44,7 @@ async function initializeI18n() {
 initializeI18n();
 
 export default i18n;
+
+
+
+
