@@ -1,17 +1,19 @@
 import React from "react";
 import scss from "./CardDiscout.module.scss";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 function CardDiscout(props) {
+  const { t } = useTranslation();
   return (
     <div className={scss.cardDiscout}>
       <Link href="/link1">
         <div className={scss.cars_info}>
           <div className={scss.card_title}>
             <p>{props.text}</p>
-            <h1>Ипотека от 1,5% на весь срок</h1>
-            <h3>До 30.03.2023</h3>
-            <p>В 2 ЖК</p>
+            <h1>{t("title")}</h1>
+            <h3>{t("date")}</h3>
+            <p>{t("location")}</p>
           </div>
           <div className={scss.card_about}>
             <div className={scss.logo}>
@@ -19,7 +21,7 @@ function CardDiscout(props) {
                 <img src={props.logo} alt="" />
               </div>
             </div>
-            <p>Ипотека</p>
+            <p>{t("label")}</p>
           </div>
         </div>
       </Link>

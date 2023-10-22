@@ -6,22 +6,20 @@ import RieltorsBLock from "@/componets/HomePage/rieltorsBLock/RieltorsBLock";
 import ServicesBlock from "@/componets/HomePage/servicesBLock/ServicesBlock";
 import i18n from "@/i18next/i18next";
 import React, { useState } from "react";
-import CompBlock from "@/componets/compBlock/compBlock";
-
-
+import CompBlock from "@/componets/HomePage/compBlock/compBlock";
 
 function HomePage() {
   const { t } = i18n;
-  const [founderContent, setfounderContent] = useState('')
+  const [founderContent, setfounderContent] = useState("");
   return (
     <div>
       <Header />
-      <Main/>
+      <Main />
       <DiscountsBLock />
-      <CompBlock/>
+      <CompBlock />
       <RieltorsBLock />
       <ServicesBlock />
-      <Footer/>
+      <Footer />
     </div>
   );
 }

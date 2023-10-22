@@ -2,31 +2,42 @@ import { useState } from "react";
 import scss from "./Header.module.scss";
 import Link from "next/link";
 import BurgerMenu from "../burgerMenu/BurgerMenu";
+import { useTranslation } from "react-i18next";
+import ReactSwitch from "react-switch";
 
 export default function Header() {
+  const { t, i18n } = useTranslation();
+
+  const [isChecked, setIsChecked] = useState(i18n.language === "ru");
+
+  const handleSwitchChange = (checked) => {
+    setIsChecked(checked);
+    const newLanguage = checked ? "ru" : "en";
+    i18n.changeLanguage(newLanguage);
+  };
   const [activeDropdown, setActiveDropdown] = useState(null);
 
   const toggleDropdown = (index) => {
     setActiveDropdown(activeDropdown === index ? null : index);
   };
   const url = [
-    { url: "/аренда-1", text: "Квартиры" },
-    { url: "/аренда-2", text: "Комнаты" },
-    { url: "/аренда-3", text: "Дома" },
-    { url: "/аренда-4", text: "Таунхаусы и коттеджи" },
+    { url: "/аренда-1", text: t("apartments") },
+    { url: "/аренда-2", text: t("rooms") },
+    { url: "/аренда-3", text: t("houses") },
+    { url: "/аренда-4", text: t("townhousesAndCottages") },
   ];
 
   const urlData = [
-    { url: "/покупка-1", text: "Квартиры в новостройках" },
-    { url: "/покупка-2", text: "Квартиры во вторичках" },
-    { url: "/покупка-3", text: "Комнаты и доли" },
+    { url: "/покупка-1", text: t("newlyBuiltApartments") },
+    { url: "/покупка-2", text: t("secondHandApartments") },
+    { url: "/покупка-3", text: t("roomsAndShares") },
   ];
 
   const urlData1 = [
-    { url: "/покупка-1", text: "Дома" },
-    { url: "/покупка-2", text: "Таунхаусы и коттеджы" },
-    { url: "/покупка-3", text: "Дачи" },
-    { url: "/покупка-4", text: "Участки" },
+    { url: "/покупка-1", text: t("houses") },
+    { url: "/покупка-2", text: t("townhousesAndCottages") },
+    { url: "/покупка-3", text: t("dachas") },
+    { url: "/покупка-4", text: t("plots") },
   ];
 
   const search = () => {
@@ -34,10 +45,10 @@ export default function Header() {
       <div className={scss.like}>
         <div className={scss.search}>
           <img src="./uiw_map.png" alt="" />
-          <a href="/">Поиск по карте</a>
+          <a href="/">{t("searchByMap")}</a>
         </div>
         <div className={scss.line1}></div>
-        <h3>Разместить объявление</h3>
+        <h3>{t("placeAd")}</h3>
       </div>
     );
   };
@@ -69,7 +80,7 @@ export default function Header() {
     return (
       <div className={scss.data}>
         <div>
-          <div className={scss.solo}>{rental_type("Квартиры")}</div>
+          <div className={scss.solo}>{rental_type(t("apartments"))}</div>
           {renderLinkList(urlData)}
           {search()}
         </div>
@@ -84,18 +95,18 @@ export default function Header() {
 
   const navigationItems = [
     {
-      label: "Аренда",
+      label: t("rent"),
       links: [
         {
           text: (
             <span className={scss.navigate_text}>
               <span className={scss.navigate_text1}>
-                {rental_type("Длительная аренда")}
+                {rental_type(t("rent"))}
                 {renderDropList()}
                 {search()}
               </span>
               <span className={scss.navigate_text1}>
-                {rental_type("Посуточная аренда")}
+                {rental_type(t("rent"))}
                 {renderDropList()}
               </span>
             </span>
@@ -104,7 +115,7 @@ export default function Header() {
       ],
     },
     {
-      label: "Покупка",
+      label: t("buy"),
       links: [
         {
           text: <div className={scss.sale1}>{renderDataSection()}</div>,
@@ -112,7 +123,7 @@ export default function Header() {
       ],
     },
     {
-      label: "Продажа",
+      label: t("sell"),
       links: [
         {
           text: <div>{renderDataSection()}</div>,
@@ -155,15 +166,26 @@ export default function Header() {
               )}
             </div>
           ))}
-          <a href="/">Риелторы</a>
-          <a href="/">Застройщики</a>
+          <a href="/">{t("realtors")}</a>
+          <a href="/">{t("developers")}</a>
         </div>
       </div>
-      <Link href="/login">
-        <div className={scss.right}>
-          <button className={scss.btn}>Войти</button>
-        </div>
-      </Link>
+      <div className={scss.right}>
+        {" "}
+        <ReactSwitch
+          onChange={handleSwitchChange}
+          checked={isChecked}
+          onColor="#407bff"
+          offColor="#000"
+          uncheckedIcon={false}
+          checkedIcon={false}
+          checkedHandleIcon={<div className={scss.switchLabel}>RU</div>}
+          uncheckedHandleIcon={<div className={scss.switchLabel}>EN</div>}
+        />
+        <Link href="/login">
+          <button className={scss.btn}>{t("login")}</button>
+        </Link>
+      </div>
     </header>
   );
 }
