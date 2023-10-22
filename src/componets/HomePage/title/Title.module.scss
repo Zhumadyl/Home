@@ -1,0 +1,14 @@
+@import "@/styles/variables.scss";
+
+.title {
+  h1 {
+    color: $color-dark;
+
+    /* Title 1 Semibold */
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}

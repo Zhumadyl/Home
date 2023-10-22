@@ -12,11 +12,11 @@ function DefaultLogin() {
 
   const submit = (e) => {
     e.preventDefault();
-    if (login === "Admin" && password === "Admin") {
-      router.push("/");
-    } else {
-      alert("Неверный логин или пароль");
-    }
+    // if (login === "Admin" && password === "Admin") {
+    //   // router.push("/");
+    // } else {
+    //   alert("Неверный логин или пароль");
+    // }
   };
 
   return (
