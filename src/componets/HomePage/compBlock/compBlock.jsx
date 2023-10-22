@@ -1,6 +1,7 @@
 import React from 'react'
 import scss from './compBlock.module.scss'
 
+
 function CompBlock() {
   return (
     <div className={scss.compBlock}>

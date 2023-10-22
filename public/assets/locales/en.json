@@ -1,41 +1,14 @@
-{
-  "rent": "Rent",
-  "buy": "Purchase",
-  "sell": "Sells",
-  "searchByMap": "Search by Map",
-  "placeAd": "Place an Ad",
-  "apartments": "Apartments",
-  "rooms": "Rooms",
-  "houses": "Houses",
-  "townhousesAndCottages": "Townhouses and Cottages",
-  "newlyBuiltApartments": "Newly Built Apartments",
-  "secondHandApartments": "Second-Hand Apartments",
-  "roomsAndShares": "Rooms and Shares",
-  "houses": "Houses",
-  "townhousesAndCottages": "Townhouses and Cottages",
-  "dachas": "Dachas",
-  "plots": "Plots",
-  "realtors": "Realtors",
-  "developers": "Developers",
-  "login": "Log In",
-
-  "title": "Mortgage at 1.5% for the entire term",
-  "date": "Until 30.03.2023",
-  "location": "In 2 residential complexes",
-  "label": "Mortgage",
-  "Promotions": "Promotions and discounts on new buildings",
-
-  "Realtors": "Realtors",
-  "name": "Olga Alekseevna",
-  "experience": "Realtor 5 years experience",
-  "see": "See more",
-
-  "Rent a House": "Rent a House",
-  "Find Rental": "Find Rental",
-  "Sell a House": "Sell a House",
-  "Place an Ad": "Place an Ad",
-  "Buy a House": "Buy a House",
-  "View options": "View options",
-  "Our Services": "Our Services",
-  "text": "We create a seamless online experience, from shopping with the largest rental network to applying and paying for your rental."
-}
+[
+  {
+    "ru": {
+      "rent": "Аренда",
+      "buy":"Покупка",
+      "sell":"Продажа"
+    },
+    "en": {
+      "rent": "Rent",
+      "buy":"Purchase",
+      "sell":"Sells"
+    }
+  }
+]
