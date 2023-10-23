@@ -17,7 +17,7 @@ export default function Home() {
         <Head>
           <title>Home</title>
         </Head>
-        {/* <HomePage /> */}
+        <HomePage />
         <PurchasePage />
       </PrivateRoute>
     </>

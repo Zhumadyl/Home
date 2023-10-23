@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "rent": "Rent",
   "buy": "Purchase",
@@ -39,3 +40,19 @@
   "Our Services": "Our Services",
   "text": "We create a seamless online experience, from shopping with the largest rental network to applying and paying for your rental."
 }
+=======
+[
+  {
+    "ru": {
+      "rent": "Аренда",
+      "buy":"Покупка",
+      "sell":"Продажа"
+    },
+    "en": {
+      "rent": "Rent",
+      "buy":"Purchase",
+      "sell":"Sells"
+    }
+  }
+]
+>>>>>>> dffdd2055f7156e33150428c96908c91483a2ad3
