@@ -1,0 +1,66 @@
+.filter{
+    padding: 0 80px;
+    display: flex;
+    gap: 10px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    button{
+        height: 37px;
+        padding: 10px 14px 10px 14px;
+        background: $color-blue;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 17px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #fff;
+        border: none;
+        border-radius:   4px;
+        cursor: pointer;
+
+    }
+    .select{
+        padding: 10px 14px 10px 14px;
+        border: 1px solid $color-575656;
+        border-radius: 4px;
+        height: 37px;
+        display: flex;
+        align-items: center;
+    }
+    input:first-child{
+        height: 44px;
+        width: 292px;
+        border: 1px solid $color-575656;
+        border-radius: 4px;
+        outline: none;
+        padding: 12px 13px;
+        background: url('../../public/Vector\ \(Stroke\).svg');
+        background-position: 95%;
+        background-repeat: no-repeat;
+    }
+    input::placeholder{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 17px;
+        letter-spacing: 0em;
+
+    }
+    select{
+        gap: 5px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 17px;
+        letter-spacing: 0em;
+        outline: none;
+        color: $color-575656;
+        border: none;
+        
+    }
+    option{
+        height: 30px;
+    }
+}

@@ -8,7 +8,7 @@ import i18n from "@/i18next/i18next";
 import React, { useState } from "react";
 import CompBlock from "@/componets/HomePage/compBlock/compBlock";
 
-function HomePage() {
+function  HomePage() {
   const { t } = i18n;
   const [founderContent, setfounderContent] = useState("");
   return (
