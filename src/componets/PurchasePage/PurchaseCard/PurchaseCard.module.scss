@@ -1,0 +1,89 @@
+@import "@/styles/variables.scss";
+
+.card {
+  width: 292px;
+  height: 379px;
+  flex-shrink: 0;
+  border-radius: 0px 0px 3px 3px;
+  background: #fff;
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.info {
+  display: flex;
+  padding: 5px;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  h2 {
+    color: $color-dark;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  h3 {
+    color: $color-dark;
+    font-family: Montserrat;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  p {
+    color: $color-dark;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px; /* 135.714% */
+  }
+}
+.rating {
+  display: flex;
+  gap: 3px;
+  align-items: baseline;
+  p {
+    color: $color-dark;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px; /* 126.667% */
+  }
+}
+
+.heart {
+  position: absolute;
+  top: 2%;
+  left: 26%;
+  cursor: pointer;
+  transition: transform 0.3s;
+
+  img {
+    transition: filter 0.3s;
+  }
+
+  &.liked img {
+    filter: brightness(0.5);
+  }
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.custom-prev-arrow,
+.custom-next-arrow {
+  position: absolute;
+}
+.custom-prev-arrow {
+  z-index: 1000;
+  top: 36%;
+  right: 98%;
+}
+.custom-next-arrow {
+  top: 36%;
+  left: 97%;
+}

@@ -32,7 +32,7 @@ async function initializeI18n() {
 
     i18n.use(initReactI18next).init({
       resources,
-      fallbackLng: "en",
+      fallbackLng: "ru",
       lng: "ru",
       interpolation: {
         escapeValue: false,

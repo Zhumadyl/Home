@@ -1,8 +1,8 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import scss from "./Header.module.scss";
 import Link from "next/link";
 import BurgerMenu from "../burgerMenu/BurgerMenu";
-import { useTranslation } from "react-i18next";
 import ReactSwitch from "react-switch";
 
 export default function Header() {
