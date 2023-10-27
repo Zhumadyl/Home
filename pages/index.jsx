@@ -7,6 +7,7 @@ import PrivateRoute from "@/constants/PrivateRoute/PrivateRoute";
 import { Provider } from "react-redux";
 import store from "@/redux/store";
 import PurchaseCard from "@/componets/PurchasePage/PurchaseCard/PurchaseCard";
+import PurchaseFilter from "@/componets/PurchasePage/PurchaseFilter/PurchaseFilter";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,8 +18,9 @@ export default function Home() {
         <Head>
           <title>Home</title>
         </Head>
-        <HomePage />
-        <PurchaseCard />
+        {/* <HomePage /> */}
+        <PurchaseFilter />
+        {/* <PurchaseCard /> */}
       </PrivateRoute>
     </>
   );

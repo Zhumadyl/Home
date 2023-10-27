@@ -1,0 +1,241 @@
+@import "@/styles/variables.scss";
+
+.filter {
+  padding: 0 80px;
+  display: flex;
+  gap: 10px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  button {
+    border: none;
+  }
+  .btn {
+    height: 37px;
+    padding: 10px 14px 10px 14px;
+    background: $color-blue;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .select,
+  .advancedSelect {
+    padding: 10px 14px 10px 14px;
+    border: 1px solid $color-575656;
+    border-radius: 4px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+  }
+  input:first-child {
+    height: 44px;
+    width: 292px;
+    border: 1px solid $color-575656;
+    border-radius: 4px;
+    outline: none;
+    padding: 12px 13px;
+    background: url("/Vector\ \(Stroke\).svg");
+    background-position: 95%;
+    background-repeat: no-repeat;
+  }
+  input::placeholder {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: 0em;
+  }
+  select,
+  .menu_button {
+    gap: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: 0em;
+    outline: none;
+    color: $color-575656;
+    border: none;
+  }
+  option {
+    height: 30px;
+  }
+}
+.option {
+  width: 460px;
+  height: 1566px;
+  flex-shrink: 0;
+}
+.advancedSelect {
+  position: relative;
+}
+.menu_button {
+  margin-left: auto;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.menu {
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 10px;
+  width: 460px;
+  height: 1566px;
+  flex-shrink: 0;
+  //   padding: 20px;
+  opacity: 0;
+  border-radius: 3px;
+  background: #fff;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.25),
+    -2px -2px 6px 0px rgba(0, 0, 0, 0.25);
+  transform: translateY(-10px);
+  visibility: hidden;
+  transition: 0.3s;
+}
+.dropMenu {
+  display: flex;
+  flex-direction: column;
+  h2 {
+    color: $color-dark;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
+.menu.active {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+.title {
+  padding: 16px 22px;
+  width: 460px;
+  height: 54px;
+  flex-shrink: 0;
+  background: #eeeef3;
+  h1 {
+    color: $color-dark;
+    font-family: Montserrat;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+}
+.date {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  .calendar {
+    width: 99%;
+    border: none;
+  }
+}
+.infoFilter {
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.filterInfo {
+  display: flex;
+  select {
+    width: 190px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 3px;
+    border: 0.5px solid $color-dark;
+    background: var(--fill-for-filter, #eeeef3);
+    color: $color-dark;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+}
+
+.line {
+  width: 12px;
+  height: 2px;
+  background: #b6b6b6;
+}
+.checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 20px;
+  .checkbox_block {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+.checkboxInfo {
+  display: flex;
+  gap: 13px;
+  p {
+    color: $color-dark;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  input:first-child {
+    width: 23px;
+    height: 23px;
+    flex-shrink: 0;
+    input[type="checkbox"] {
+      border-radius: 4px;
+      border: 2px solid var(--Main-blue, #0069ff);
+    }
+  }
+}
+.btns {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  p {
+    color: $color-blue;
+    font-family: Montserrat;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .btn {
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 3px;
+    background: $color-blue;
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}

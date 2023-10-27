@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import HomePage from "@/pages/HomePage/HomePage";
 import PrivateRoute from "@/constants/PrivateRoute/PrivateRoute";
 import Header from "@/componets/HomePage/header/Header";
+import PurchasePage from "@/pages/PurchasePage/PurchasePage";
 
 const inter = Inter({ subsets: ["latin"] });
 
