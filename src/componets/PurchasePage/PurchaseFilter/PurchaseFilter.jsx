@@ -37,7 +37,7 @@ function PurchaseFilter() {
   };
 
   return (
-    <div>
+    <div className={scss.purchaseFilter}>
       {/* <Header /> */}
       <section className={scss.filter}>
         <input

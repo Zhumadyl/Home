@@ -1,7 +1,14 @@
 @import "@/styles/variables.scss";
 
+.purchaseFilter {
+  height: 80px;
+  flex-shrink: 0;
+  border: 1px solid var(--gray, #575656);
+  background: var(--white, #fff);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15);
+}
 .filter {
-  padding: 0 80px;
+  padding: 0 34px;
   display: flex;
   gap: 10px;
   height: 80px;
@@ -87,6 +94,7 @@
 }
 
 .menu {
+  z-index: 10000;
   position: absolute;
   top: calc(100% + 5px);
   right: 10px;

@@ -1,0 +1,24 @@
+.pagination {
+  display: flex;
+  gap: 20px;
+}
+.btn {
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
+  stroke-width: 2px;
+  stroke: var(--Main-blue, #0069ff);
+  color: black;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border-radius: 50px;
+  border: none;
+  background-color: transparent;
+}
+.btn:hover {
+  border: 2px solid #0069ff;
+  color: #0069ff;
+}

@@ -1,7 +1,11 @@
 @import "@/styles/variables.scss";
 
+.wrapper {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+}
 .card {
-  margin: 100px;
   width: 292px;
   height: 379px;
   flex-shrink: 0;
@@ -82,9 +86,9 @@
 .custom-prev-arrow {
   z-index: 1000;
   top: 36%;
-  right: 98%;
+  right: 78%;
 }
 .custom-next-arrow {
   top: 36%;
-  left: 97%;
+  left: 78%;
 }

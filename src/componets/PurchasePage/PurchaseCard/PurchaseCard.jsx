@@ -4,8 +4,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import scss from "./PurchaseCard.module.scss";
 import { CustomPrevArrow, CustomNextArrow } from "./buttonSlider";
+import Link from "next/link";
 
-function PurchaseCard() {
+function PurchaseCard({ isCard, loading }) {
   const settings = {
     infinite: true,
     speed: 500,
@@ -14,22 +15,27 @@ function PurchaseCard() {
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
   };
-  const [liked, isLiked] = useState(false);
 
-  const handleLiked = () => {
-    isLiked(!liked);
+  const [likedState, setLikedState] = useState(isCard.map(() => false));
+
+  const handleLiked = (index) => {
+    const updatedLikedState = [...likedState];
+    updatedLikedState[index] = !updatedLikedState[index];
+    setLikedState(updatedLikedState);
   };
 
-  const sliderInfo = () => {
+  const sliderInfo = (index) => {
     return (
       <div>
         <div className={scss.cardSlider}>
           <div className={scss.img}>
-            <img src="/assets/images/Image.png" alt="" />
+            <Link href="/">
+              <img src="/assets/images/Image.png" alt="" />
+            </Link>
           </div>
           <div
-            className={`${scss.heart} ${liked ? scss.liked : ""}`}
-            onClick={handleLiked}
+            className={`${scss.heart} ${likedState[index] ? scss.liked : ""}`}
+            onClick={() => handleLiked(index)}
           >
             <img src="/assets/images/Heart.png" alt="" />
           </div>
@@ -38,24 +44,32 @@ function PurchaseCard() {
     );
   };
 
+  if (loading) {
+    return <h1>Loading . . . </h1>;
+  }
+
   return (
-    <div className={scss.card}>
-      <Slider {...settings}>
-        {sliderInfo()}
-        {sliderInfo()}
-        {sliderInfo()}
-      </Slider>
-      <div className={scss.info}>
-        <div className={scss.title}>
-          <h2>25 000 С/мес</h2>
-          <p>2-х комн. кв., 70 кв. м2, 7 эт. из 10</p>
-          <h3>Бишкек, Ахунбаева №29...</h3>
+    <div className={scss.wrapper}>
+      {isCard.map((card, i) => (
+        <div className={scss.card} key={i}>
+          <Slider {...settings}>
+            {sliderInfo(i)}
+            {sliderInfo(i)}
+            {sliderInfo(i)}
+          </Slider>
+          <div className={scss.info}>
+            <div className={scss.title}>
+              <h2>{card.price + " C/мес"}</h2>
+              <p>2-х комн. кв., 70 кв. м2, 7 эт. из 10</p>
+              <h3>{card.street + "...."}</h3>
+            </div>
+            <div className={scss.rating}>
+              <img src="/assets/images/vector.png" alt="" />
+              <p>4,88</p>
+            </div>
+          </div>
         </div>
-        <div className={scss.rating}>
-          <img src="/assets/images/vector.png" alt="" />
-          <p>4,88</p>
-        </div>
-      </div>
+      ))}
     </div>
   );
 }
