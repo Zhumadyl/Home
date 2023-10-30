@@ -10,7 +10,7 @@ function CardServices(props) {
       <div className={scss.card}>
         <img src={props.img} alt="" />
         <h2>{props.title}</h2>
-        <p>{t("text")}</p>
+        <p>{t("header.text")}</p>
         <Link href={props.link}>
           <button className={scss.btn}>{props.btn}</button>
         </Link>

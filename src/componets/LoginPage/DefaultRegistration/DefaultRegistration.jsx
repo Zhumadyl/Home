@@ -4,10 +4,13 @@ import Link from "next/link";
 import Google from "../google/Google";
 import Title from "../title/Title";
 
-function DefaultRegistration() {
+function DefaultRegistration({ onNextStep }) {
   const submit = (e) => {
     e.preventDefault();
+    // Assuming a successful registration, you can trigger the next step
+    onNextStep("telephoneAuthorization");
   };
+
   return (
     <div className={scss.defaultRegistration}>
       <Title title="Регистрация" />
@@ -36,9 +39,9 @@ function DefaultRegistration() {
           />
         </div>
         <div className={scss.btns}>
-          <Link href="/TelephoneAutorization">
-            <button className={scss.btn1}>Далее</button>
-          </Link>
+          <button type="submit" className={scss.btn1}>
+            Далее
+          </button>
           <div>
             <Google />
           </div>
@@ -52,3 +55,8 @@ function DefaultRegistration() {
 }
 
 export default DefaultRegistration;
+
+
+
+
+

@@ -1,14 +1,79 @@
-[
-  {
-    "ru": {
-      "rent": "Аренда",
-      "buy":"Покупка",
-      "sell":"Продажа"
+{
+    "header": {
+        "rent": "Rent",
+        "buy": "Purchase",
+        "sell": "Sells",
+        "searchByMap": "Search by Map",
+        "placeAd": "Place an Ad",
+        "apartments": "Apartments",
+        "rooms": "Rooms",
+        "houses": "Houses",
+        "townhousesAndCottages": "Townhouses and Cottages",
+        "newlyBuiltApartments": "Newly Built Apartments",
+        "secondHandApartments": "Second-Hand Apartments",
+        "roomsAndShares": "Rooms and Shares",
+        "dachas": "Dachas",
+        "plots": "Plots",
+        "realtors": "Realtors",
+        "developers": "Developers",
+        "login": "Log In",
+        "title": "Mortgage at 1.5% for the entire term",
+        "date": "Until 30.03.2023",
+        "location": "In 2 residential complexes",
+        "label": "Mortgage",
+        "Promotions": "Promotions and discounts on new buildings",
+        "Realtors": "Realtors",
+        "name": "Olga Alekseevna",
+        "experience": "Realtor 5 years experience",
+        "see": "See more",
+        "Rent a House": "Rent a House",
+        "Find Rental": "Find Rental",
+        "Sell a House": "Sell a House",
+        "Place an Ad": "Place an Ad",
+        "Buy a House": "Buy a House",
+        "View options": "View options",
+        "Our Services": "Our Services",
+        "text": "We create a seamless online experience, from shopping with the largest rental network to applying and paying for your rental."
     },
-    "en": {
-      "rent": "Rent",
-      "buy":"Purchase",
-      "sell":"Sells"
+    "main": {
+        "room": "Best real estate for you",
+        "placeholder": "Address, district, city, or RC",
+        "find": "Find"
+    },
+    "footer": {
+        "rights": "All rights secured",
+        "rent": {
+            "name": "Rent",
+            "content": [
+                "Rooms",
+                "Apartments",
+                "Houses",
+                "Plots",
+                "Commerical",
+                "Daily Rent",
+                "All rental advertisements"
+            ]
+        },
+        "buy": {
+            "name": "Purchase",
+            "content": [
+                "Apartments",
+                "New buidings",
+                "Houses",
+                "Plots",
+                "Buy from owner",
+                "Buy from realtor",
+                "All advertisment"
+            ]
+        },
+        "sell": {
+            "name": "Sell",
+            "content": [
+                "My ads",
+                "Seller's guide",
+                "Find realtor"
+            ]
+        },
+        "info": "Welcome to SolidHome - a website for buying, renting and selling real estate in Kyrgyzstan! Our platform offers a wide range of options for those interested in buying, renting or selling property in this beautiful country. Whether you are looking for a cozy apartment in the center of Bishkek or a spacious villa in the suburbs, we have plenty to choose from."
     }
-  }
-]
+}

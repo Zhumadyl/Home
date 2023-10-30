@@ -4,7 +4,6 @@ import { Inter } from "next/font/google";
 import styles from "@/pages/Home.module.scss";
 import HomePage from "@/pages/HomePage";
 import PrivateRoute from "@/constants/PrivateRoute/PrivateRoute";
-import { Provider } from "react-redux";
 import store from "@/redux/store";
 
 const inter = Inter({ subsets: ["latin"] });
