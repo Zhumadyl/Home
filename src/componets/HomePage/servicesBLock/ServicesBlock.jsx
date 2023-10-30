@@ -8,24 +8,24 @@ function ServicesBlock() {
   const { t } = useTranslation();
   return (
     <div className={scss.servicesBlock}>
-      <Title title={t("Our Services")} />
+      <Title title={t("header.Our Services")} />
       <div className={scss.cards}>
         <CardServices
           img="./assets/images/Picteure house search.png"
-          title={t("Rent a House")}
-          btn={t("Find Rental")}
+          title={t("header.Rent a House")}
+          btn={t("header.Find Rental")}
           link="/link1"
         />{" "}
         <CardServices
           img="./assets/images/зеленая картинка.png"
-          title={t("Sell a House")}
-          btn={t("Place an Ad")}
+          title={t("header.Sell a House")}
+          btn={t("header.Place an Ad")}
           link="/link2"
         />{" "}
         <CardServices
           img="./assets/images/поиск дома.png"
-          title={t("Buy a House")}
-          btn={t("View options")}
+          title={t("header.Buy a House")}
+          btn={t("header.View options")}
           link="/link3"
         />
       </div>
