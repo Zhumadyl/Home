@@ -13,13 +13,13 @@ function HomePage() {
   const [founderContent, setfounderContent] = useState("");
   return (
     <div>
-      {/* <Header /> */}
-      {/* <Main />  */}
-      {/* <DiscountsBLock /> */}
-      {/* <CompBlock />
+      <Header />
+      <Main /> 
+      <DiscountsBLock />
+       <CompBlock />
       <RieltorsBLock />
       <ServicesBlock />
-      <Footer /> */}
+      <Footer /> 
     </div>
   );
 }

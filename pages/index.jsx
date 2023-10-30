@@ -17,7 +17,6 @@ export default function Home() {
           <title>Home</title>
         </Head>
         <HomePage />
-        <Purchase />
       </PrivateRoute>
     </>
   );
