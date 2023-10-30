@@ -1,0 +1,62 @@
+@import "@/styles/variables.scss";
+
+.mapping {
+  display: flex;
+  gap: 57px;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  h1 {
+    color: $color-dark;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 19px; /* 79.167% */
+  }
+  h2 {
+    color: $color-dark;
+    font-family: Montserrat;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 19px; /* 111.765% */
+  }
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 33px 0px 0px;
+}
+.result {
+  display: flex;
+  justify-content: space-between;
+  select {
+    color: $color-blue;
+    border: none;
+    font-family: Montserrat;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+}
+.btns {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  button {
+    border: none;
+    background-color: transparent;
+  }
+}
+.preloader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
