@@ -12,8 +12,8 @@ function RieltorsBLock() {
     return (
       <CardRieltors
         img="./assets/images/avatar.png"
-        title={t("name")}
-        text={t("experience")}
+        title={t("header.name")}
+        text={t("header.experience")}
       />
     );
   };
@@ -21,10 +21,10 @@ function RieltorsBLock() {
     <div className={scss.block}>
       <div className={scss.rieltorsBLock}>
         <div className={scss.title}>
-          <Title title={t("Realtors")} />
+          <Title title={t("header.Realtors")} />
           <Link href="/asd">
             <div>
-              <p>{t("see")}</p>
+              <p>{t("header.see")}</p>
               <img src="./assets/images/Union.png" alt="" />
             </div>
           </Link>

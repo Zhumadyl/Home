@@ -63,7 +63,7 @@ function DiscountsBLock() {
 
   return (
     <div className={scss.discountsBLock}>
-      <Title title={t("Promotions")} />
+      <Title title={t("header.Promotions")} />
       <Slider {...settings}>
         {duplicatedCards.map((card, index) => (
           <div key={index} className={scss.cards}>
