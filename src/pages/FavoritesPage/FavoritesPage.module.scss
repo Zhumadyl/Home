@@ -1,0 +1,21 @@
+@import "@/styles/variables.scss";
+
+.favoritesCard {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+  padding: 50px 88px;
+  h1 {
+    color: $color-575656;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+}

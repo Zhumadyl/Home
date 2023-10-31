@@ -1,0 +1,207 @@
+@import "@/styles/variables.scss";
+
+.advert {
+  padding: 50px 88px;
+  display: flex;
+  gap: 93px;
+  h1 {
+    color: $color-575656;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .createLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .blocks {
+      width: 323px;
+      height: 290px;
+      flex-shrink: 0;
+      border-radius: 3px;
+      border: 1px solid $color-d7d7d7;
+      background: $color-white;
+      h2 {
+        padding: 20px 80px 18px 34px;
+        color: $color-575656;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+      .line {
+        width: 323px;
+        height: 1px;
+        background: $color-d7d7d7;
+      }
+    }
+  }
+  .basis {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    div {
+      display: flex;
+      gap: 20px;
+      select,
+      input {
+        width: 215px;
+        height: 55px;
+        flex-shrink: 0;
+        border-radius: 3px;
+        border: 0.621px solid $color-575656;
+        background: $color-white;
+      }
+      input[type="text"],
+      [type="number"] {
+        padding: 20px;
+        color: $color-d7d7d7;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+      label {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        color: $color-575656;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+    }
+    .miniInput {
+      input {
+        width: 130px;
+        height: 55px;
+        flex-shrink: 0;
+      }
+    }
+  }
+  .createRight {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    .characteristics {
+      display: flex;
+      flex-direction: column;
+      gap: 55px;
+      .title {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        p {
+          color: $color-575656;
+          font-family: Montserrat;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 20px; /* 125% */
+        }
+      }
+    }
+    .checkboxes {
+      display: flex;
+      gap: 105px;
+      .box {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .check {
+        display: flex;
+        gap: 12px;
+
+        input {
+          width: 20px;
+          height: 20px;
+          flex-shrink: 0;
+          border: 1px solid $color-575656;
+          background: $color-white;
+        }
+        p {
+          color: $color-575656;
+          font-family: Montserrat;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+      }
+    }
+    .location {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      div {
+        display: flex;
+        gap: 20px;
+      }
+      select {
+        width: 292px;
+        height: 55px;
+        flex-shrink: 0;
+        border-radius: 3px;
+        border: 0.621px solid $color-575656;
+        background: $color-white;
+      }
+
+      div {
+        label {
+          display: flex;
+          flex-direction: column;
+          gap: 9px;
+          color: $color-575656;
+          font-family: Montserrat;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          input {
+            padding: 20px;
+            width: 292px;
+            height: 55px;
+            flex-shrink: 0;
+            border-radius: 3px;
+            border: 0.621px solid $color-575656;
+            background: $color-white;
+            color: $color-d7d7d7;
+            font-family: Montserrat;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+        input {
+          padding: 20px;
+          width: 130px;
+          height: 55px;
+          flex-shrink: 0;
+          border-radius: 3px;
+          border: 0.621px solid #575656;
+          background: #fff;
+          color: $color-d7d7d7;
+          font-family: Montserrat;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
+    .map {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}

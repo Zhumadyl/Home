@@ -1,0 +1,115 @@
+@import "@/styles/variables.scss";
+
+.card {
+  width: 616px;
+  height: 248px;
+  flex-shrink: 0;
+  border-radius: 3px;
+  border: 1px solid #e6e6e6;
+  background: $color-white;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+  display: flex;
+  //   gap: 15px;
+  .text {
+    width: 240px;
+    color: $color-dark;
+    font-family: Montserrat;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 19px; /* 111.765% */
+  }
+  .cardInfo {
+    padding: 20px 10px 0px 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    .title {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      h4 {
+        color: $color-575656;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h2 {
+          color: $color-dark;
+          font-family: Montserrat;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+        p {
+          color: #f79400;
+          font-family: Montserrat;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
+  }
+  .services {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    div {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+    .service {
+      display: flex;
+      gap: 3px;
+      p {
+        color: $color-575656;
+
+        /* Subtitle 2 Regular */
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 19px; /* 135.714% */
+      }
+    }
+  }
+  .price {
+    display: flex;
+    justify-content: space-between;
+    h1 {
+      color: $color-dark;
+      font-family: Montserrat;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+    .heart {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      transition: transform 0.3s;
+
+      img {
+        transition: filter 0.3s;
+      }
+
+      &.liked img {
+        filter: brightness(0.1);
+      }
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

@@ -136,7 +136,9 @@ export default function Header() {
     <header className={scss.header}>
       <div className={scss.left}>
         <div className={scss.logo}>
-          <Link href='/'><img src="./assets/images/Logo.svg" alt="Logo" /></Link>
+          <Link href="/">
+            <img src="./assets/images/Logo.svg" alt="Logo" />
+          </Link>
           <div className={scss.BurgerMenu}>
             <BurgerMenu />
           </div>

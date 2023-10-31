@@ -6,6 +6,8 @@ import HomePage from "@/pages/HomePage/HomePage";
 import PrivateRoute from "@/constants/PrivateRoute/PrivateRoute";
 import store from "@/redux/store";
 import Purchase from "./purchase";
+import Favorites from "./favourites";
+import Create from "./create";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +18,9 @@ export default function Home() {
         <Head>
           <title>Home</title>
         </Head>
-        <HomePage />
+        {/* <HomePage /> */}
+        {/* <Favorites /> */}
+        <Create />
       </PrivateRoute>
     </>
   );

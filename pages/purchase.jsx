@@ -50,7 +50,7 @@ export default function Purchase() {
     <PrivateRoute>
       <>
         <div className={scss.wrapper}>
-          <Header/>
+          <Header />
           <PurchaseFilter />
           <div className={scss.mapping}>
             <div className={scss.map}>
@@ -93,7 +93,7 @@ export default function Purchase() {
               </div>
             </div>
           </div>
-          <Footer/>
+          <Footer />
         </div>
       </>
     </PrivateRoute>
