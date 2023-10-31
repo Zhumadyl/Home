@@ -15,7 +15,7 @@ function Footer() {
         <div className={scss.footerTopDiv}>
           <div className={scss.leftDiv}>
             <div>
-              <h2>{t([`welcome.name.0`])}</h2>
+              <h2>{'SolidHome'}</h2>
               <p>Добро пожаловать на SolidHome - сайт по покупке, аренде и продаже недвижимости в Кыргызстане!    Наша платформа предлагает широкий спектр возможностей для тех, кто заинтересован в покупке, аренде или продаже недвижимости в этой прекрасной стране. Если вы ищете уютную квартиру в центре Бишкека или просторную виллу в пригороде, у нас есть из чего выбрать.</p>
             </div>
             <div>
@@ -65,8 +65,6 @@ function Footer() {
               <Link href={`/list/${user}`}>Мои обьявления</Link>
               <Link href="/management">Руководство для продавцов</Link>
               <Link href="/asd">Найти риелтора</Link>
-              <button onClick={() => changeLanguage('en')}>Click</button>
-
                 
               </div>
             </div>
