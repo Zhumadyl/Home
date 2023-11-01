@@ -1,24 +1,25 @@
 import React, { useState } from "react";
 import scss from "./DefaultLogin.module.scss";
-import Link from "next/link";
 import Google from "../google/Google";
-import { useRouter } from "next/router";
 import Title from "../title/Title";
 
-function DefaultLogin() {
-  const router = useRouter();
+function DefaultLogin({ onRegistrationLinkClick, onGoogleLinkClick ,onNextStep}) {
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
 
-  const submit = (e) => {
-    e.preventDefault();
-    // if (login === "Admin" && password === "Admin") {
-    //   // router.push("/");
-    // } else {
-    //   alert("Неверный логин или пароль");
-    // }
+  const handleRegistrationLinkClick = () => {
+    onRegistrationLinkClick();
   };
 
+  const submit = (e) => {
+    e.preventDefault();
+    onNextStep("telephoneAuthorization");
+
+  };
+
+  const handleGoogleLinkClick = () => {
+    onGoogleLinkClick(); 
+  }
   return (
     <div className={scss.defaultRegistration}>
       <Title title="Войти" />
@@ -40,18 +41,15 @@ function DefaultLogin() {
             placeholder=".  .  .  .  .  .  .  ."
             onChange={(e) => setPassword(e.target.value)}
           />{" "}
-          <Link href="/TelephoneAutorization">
-            <h4>Я не помню свой пароль</h4>
-          </Link>
         </div>
         <div className={scss.btns}>
-          <button className={scss.btn1}>Войти</button>
-          <div>
+          <button className={scss.btn1} onClick={submit}>Войти</button>
+          <div onClick={handleGoogleLinkClick}>
             <Google />
           </div>
-          <Link href="/DefaultRegistration">
-            <p>Еще нет учетной записи? Зарегистрируйся прямо сейчас!</p>
-          </Link>
+          <div>
+            <p onClick={handleRegistrationLinkClick}>Еще нет учетной записи? Зарегистрируйся прямо сейчас!</p>
+          </div>
         </div>
       </form>
     </div>
