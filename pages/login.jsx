@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { onAuthStateChanged } from "firebase/auth"; 
+import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../src/componets/firebase/firebase";
 import DefaultLogin from "@/componets/LoginPage/DefaultLogin/DefaultLogin";
 import DefaultRegistration from "@/componets/LoginPage/DefaultRegistration/DefaultRegistration";
@@ -8,9 +8,8 @@ import GoogleAutorization from "@/componets/LoginPage/googleAutorization/GoogleA
 import PasswordAutorization from "@/componets/LoginPage/passwordAutorization/PasswordAutorization";
 import TelephoneAutorization from "@/componets/LoginPage/TelephoneAutorization/TelephoneAutorization";
 
-function Login() {
-
-  const [currentStep, setCurrentStep] = useState("registration");
+function Login(props) {
+  const [currentStep, setCurrentStep] = useState("login");
   const handleStepChange = (step) => {
     setCurrentStep(step);
   };
@@ -19,22 +18,37 @@ function Login() {
   const router = useRouter();
 
   useEffect(() => {
-    // Listen for changes in the user's sign-in state
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        // User is signed in
         setUser(user);
-        // You can also redirect the user to another page
         router.push("/");
       } else {
-        // User is signed out
         setUser(null);
       }
     });
 
-    // Clean up the listener when the component unmounts
     return () => unsubscribe();
   }, [router]);
+
+  const handleAuthComplete = (authData) => {
+    // Handle the authentication data here
+    console.log("Authentication data:", authData);
+    // You can also save the data to Local Storage here
+    // localStorage.setItem("authData", JSON.stringify(authData));
+    // Then, you can redirect or perform other actions as needed
+    router.push("/");
+  };
+
+  const handleRegistrationLinkClick = () => {
+    handleStepChange("registration");
+  };
+  const handleLoginLinkClick = () => {
+    handleStepChange("login");
+  };
+  const handleGoogleLinkClick = () => {
+    handleStepChange("google");
+  };
+
 
   if (user) {
     return <div>You are already logged in as {user.email}</div>;
@@ -43,23 +57,42 @@ function Login() {
   return (
     <div>
       {currentStep === "login" && (
-        <DefaultLogin onNextStep={() => handleStepChange("registration")} />
+        <DefaultLogin
+          onNextStep={(authData) => handleStepChange("registration")}
+          onRegistrationLinkClick={handleRegistrationLinkClick}
+          onGoogleLinkClick={handleGoogleLinkClick} // Pass the function here
+        />
       )}
       {currentStep === "registration" && (
-        <DefaultRegistration onNextStep={() => handleStepChange("password")} />
+        <DefaultRegistration
+          onNextStep={(authData) => handleStepChange("telephone")}
+          onLoginLinkClick={handleLoginLinkClick}
+          onGoogleLinkClick={handleGoogleLinkClick} // Pass the function here
+          props={props}
+        />
+
       )}
       {currentStep === "google" && (
-        <GoogleAutorization onNextStep={() => handleStepChange("password")} />
+        <GoogleAutorization
+          onNextStep={(authData) => handleStepChange("password")}
+          onGoogleLinkClick={handleGoogleLinkClick} // Pass the function here
+          props={props}
+        />
+
+      )}
+      {currentStep === "telephone" && (
+        <TelephoneAutorization
+          onNextStep={(authData) => handleStepChange("password")}
+        />
+
       )}
       {currentStep === "password" && (
-        <PasswordAutorization onNextStep={() => handleStepChange("telephone")} />
+        <PasswordAutorization
+          onNextStep={(authData) => handleAuthComplete(authData)}
+        />
       )}
-      {currentStep === "telephone" && <TelephoneAutorization />}
     </div>
   );
 }
 
 export default Login;
-
-
-
