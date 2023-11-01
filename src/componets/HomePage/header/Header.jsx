@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import scss from "./Header.module.scss";
 import Link from "next/link";
 import BurgerMenu from "../burgerMenu/BurgerMenu";
-import ReactSwitch from "react-switch";
 
 export default function Header() {
   const { t, i18n } = useTranslation();
@@ -172,16 +171,6 @@ export default function Header() {
       </div>
       <div className={scss.right}>
         {" "}
-        <ReactSwitch
-          onChange={handleSwitchChange}
-          checked={isChecked}
-          onColor="#407bff"
-          offColor="#000"
-          uncheckedIcon={false}
-          checkedIcon={false}
-          checkedHandleIcon={<div className={scss.switchLabel}>RU</div>}
-          uncheckedHandleIcon={<div className={scss.switchLabel}>EN</div>}
-        />
         <Link href="/login">
           <button className={scss.btn}>{t("header.login")}</button>
         </Link>

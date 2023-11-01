@@ -1,6 +1,9 @@
 // components/PrivateRoute.js
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import { Provider } from 'react-redux';
+import store from '@/redux';
+
 
 function PrivateRoute({ children }) {
   const router = useRouter();
@@ -13,7 +16,9 @@ function PrivateRoute({ children }) {
     }
   }, [isAuthenticated, router]);
 
-  return children;
+  return <Provider store={store}>
+    {children}
+    </Provider>;
 }
 
 export default PrivateRoute;
