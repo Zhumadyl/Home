@@ -8,6 +8,8 @@ import ReactSwitch from "react-switch";
 export default function Header() {
   const { t, i18n } = useTranslation();
 
+  const [isAuth, setAuth] = useState(false);
+
   const [isChecked, setIsChecked] = useState(i18n.language === "ru");
 
   const handleSwitchChange = (checked) => {
@@ -184,9 +186,15 @@ export default function Header() {
           checkedHandleIcon={<div className={scss.switchLabel}>RU</div>}
           uncheckedHandleIcon={<div className={scss.switchLabel}>EN</div>}
         />
-        <Link href="/login">
-          <button className={scss.btn}>{t("header.login")}</button>
-        </Link>
+        {isAuth ? (
+          <button className={scss.btn}>Разместить объявление</button>
+        ) : (
+          <Link href="/login">
+            <button onClick={() => setAuth(!isAuth)} className={scss.btn}>
+              {t("header.login")}
+            </button>
+          </Link>
+        )}
       </div>
     </header>
   );
