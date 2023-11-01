@@ -5,8 +5,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { CustomPrevArrow, CustomNextArrow } from "./ButtonSLider";
+import { useTranslation } from "react-i18next";
+import Title from "../title/Title";
 
 function DiscountsBLock() {
+  const { t } = useTranslation();
   const settings = {
     dots: false,
     infinite: true,
@@ -60,7 +63,7 @@ function DiscountsBLock() {
 
   return (
     <div className={scss.discountsBLock}>
-      <h1>Акции и скидки на новостройки</h1>
+      <Title title={t("header.Promotions")} />
       <Slider {...settings}>
         {duplicatedCards.map((card, index) => (
           <div key={index} className={scss.cards}>

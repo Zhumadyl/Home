@@ -2,14 +2,18 @@ import React from "react";
 import CardRieltors from "../cardRieltors/CardRieltors";
 import scss from "./RieltorsBlock.module.scss";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
+import Title from "../title/Title";
 
 function RieltorsBLock() {
+  const { t } = useTranslation();
+
   const card = () => {
     return (
       <CardRieltors
         img="./assets/images/avatar.png"
-        title="Ольга Алексеевна"
-        text="Риелтор стаж 5 лет"
+        title={t("header.name")}
+        text={t("header.experience")}
       />
     );
   };
@@ -17,10 +21,10 @@ function RieltorsBLock() {
     <div className={scss.block}>
       <div className={scss.rieltorsBLock}>
         <div className={scss.title}>
-          <h1>Риелторы</h1>
+          <Title title={t("header.Realtors")} />
           <Link href="/asd">
             <div>
-              <p>Смотреть больше</p>
+              <p>{t("header.see")}</p>
               <img src="./assets/images/Union.png" alt="" />
             </div>
           </Link>

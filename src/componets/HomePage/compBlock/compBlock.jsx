@@ -1,6 +1,7 @@
 import React from 'react'
 import scss from './compBlock.module.scss'
 
+
 function CompBlock() {
   const compName = ['Primex', 'Starforge', 'Terraguard', 'Probuilding']
   return (

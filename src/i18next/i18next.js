@@ -25,11 +25,12 @@ i18n
       en: { translation: en },
       ru: { translation: ru} ,
     },
-    fallbackLng: 'ru',
-    lng: 'ru',
+    fallbackLng: 'en',
+    lng: 'en',
     interpolation: {
       escapeValue: false,
     },
   });
 
 export default i18n;
+

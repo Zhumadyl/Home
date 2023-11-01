@@ -1,13 +1,24 @@
+// DefaultRegistration.jsx
 import React from "react";
 import scss from "./DefaultRegistration.module.scss";
 import Link from "next/link";
 import Google from "../google/Google";
 import Title from "../title/Title";
 
-function DefaultRegistration() {
+function DefaultRegistration({ onNextStep, onLoginLinkClick, onGoogleLinkClick }) {
   const submit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevent the default form submission
+    onNextStep("telephoneAuthorization");
   };
+
+  const handleLoginLinkClick = () => {
+    onLoginLinkClick();
+  }
+
+  const handleGoogleLinkClick = () => {
+    onGoogleLinkClick();
+  }
+
   return (
     <div className={scss.defaultRegistration}>
       <Title title="Регистрация" />
@@ -16,35 +27,33 @@ function DefaultRegistration() {
           <div>
             <label>Имя</label>
           </div>
-          <input type="text" placeholder="Иван " name="" id="" />{" "}
+          <input type="text" placeholder="Иван" name="firstName" id="firstName" />{" "}
           <div>
             <label>Фамилия</label>
           </div>
-          <input type="text" placeholder="Иванов " name="" id="" />{" "}
+          <input type="text" placeholder="Иванов" name="lastName" id="lastName" />{" "}
           <div>
-            <label>Номер телефона </label>
+            <label>Номер телефона</label>
           </div>
-          <input type="number" placeholder="Номер телефона " name="" id="" />{" "}
+          <input type="number" placeholder="Номер телефона" name="phoneNumber" id="phoneNumber" />{" "}
           <div>
             <label>E-mail</label>
           </div>
           <input
             type="email"
             placeholder="ivanivanov@gmail.com"
-            name=""
-            id=""
+            name="email"
+            id="email"
           />
         </div>
         <div className={scss.btns}>
-          <Link href="/TelephoneAutorization">
-            <button className={scss.btn1}>Далее</button>
-          </Link>
-          <div>
+          <button type="submit" className={scss.btn1}>
+            Далее
+          </button>
+          <div onClick={handleGoogleLinkClick}>
             <Google />
           </div>
-          <Link href="/TelephoneAutorization">
-            <p>Еще нет учетной записи? Зарегистрируйся прямо сейчас!</p>
-          </Link>
+          <p onClick={handleLoginLinkClick}>У вас уже есть учетная запись? Войти</p>
         </div>
       </form>
     </div>

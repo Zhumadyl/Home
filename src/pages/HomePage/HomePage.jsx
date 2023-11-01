@@ -5,10 +5,11 @@ import Header from "@/componets/HomePage/header/Header";
 import RieltorsBLock from "@/componets/HomePage/rieltorsBLock/RieltorsBLock";
 import ServicesBlock from "@/componets/HomePage/servicesBLock/ServicesBlock";
 import i18n from "@/i18next/i18next";
-import React, { useEffect, useState } from "react";
-import CompBlock from "@/componets/compBlock/compBlock";
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchTranslations } from "@/redux/asyncThunk";
+import { useState } from "react";
+import CompBlock from "@/componets/HomePage/compBlock/compBlock";
 
 
 
@@ -21,17 +22,22 @@ function HomePage() {
       dispatch(fetchTranslations())
     }, [])
   
+
+function HomePage() {
+  const { t } = i18n;
+  const [founderContent, setfounderContent] = useState("");
   return (
     <div>
       <Header />
-      <Main/>
+      <Main /> 
       <DiscountsBLock />
-      <CompBlock/>
+       <CompBlock />
       <RieltorsBLock />
       <ServicesBlock />
-      <Footer/>
+      <Footer /> 
     </div>
   );
+}
 }
 
 export default HomePage;
