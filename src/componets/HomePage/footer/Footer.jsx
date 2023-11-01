@@ -1,9 +1,6 @@
 import Link from 'next/link'
 import scss from './Footer.module.scss'
-<<<<<<< HEAD
-import { useTranslation } from 'react-i18next'
-import { useSelector } from 'react-redux'
-import { useState } from 'react'
+import { useTranslation } from 'react-i18next';
 
 
 
@@ -11,24 +8,18 @@ function Footer() {
   const user = () => {
     'Asan' + 'Bek'
   }
-=======
-import { useTranslation } from 'react-i18next';
 
 function Footer() {
   const { t } = useTranslation();
->>>>>>> dfb773796bde2be33d80631ffae31a4ec93613c7
   return (
     <div className={scss.footer}>
         <div className={scss.footerTopDiv}>
           <div className={scss.leftDiv}>
             <div>
-<<<<<<< HEAD
               <h2>{'SolidHome'}</h2>
               <p>Добро пожаловать на SolidHome - сайт по покупке, аренде и продаже недвижимости в Кыргызстане!    Наша платформа предлагает широкий спектр возможностей для тех, кто заинтересован в покупке, аренде или продаже недвижимости в этой прекрасной стране. Если вы ищете уютную квартиру в центре Бишкека или просторную виллу в пригороде, у нас есть из чего выбрать.</p>
-=======
               <h2>SolidHome</h2>
               <p>{t("footer.info")}</p>
->>>>>>> dfb773796bde2be33d80631ffae31a4ec93613c7
             </div>
             <div>
               <Link href="https://www.apple.com/ru/app-store/">
@@ -44,15 +35,13 @@ function Footer() {
               <h3>{t("footer.rent.name")}</h3>
               <div className={scss.line}></div>
               <div className={scss.content}>
-<<<<<<< HEAD
-                <Link href="/list/rent/rooms">Комнаты</Link>
+                {/* <Link href="/list/rent/rooms">Комнаты</Link>
                 <Link href="/list/rent/apartments">Квартиры</Link>
                 <Link href="/list/rent/houses">Дома</Link>
                 <Link href="/list/rent/plots">Участка</Link>
                 <Link href="/list/rent/commerical">Коммерчиская</Link>
                 <Link href="/list/rent/daily">Посуточная аренда</Link>
-                <Link href="/list/rent/">Все объявления об аренде</Link>
-=======
+                <Link href="/list/rent/">Все объявления об аренде</Link> */}
                 <Link href="/purchase">{t("footer.rent.content.0")}</Link>
                 <Link href="/purchase">{t("footer.rent.content.1")}</Link>
                 <Link href="/purchase">{t("footer.rent.content.2")}</Link>
@@ -60,7 +49,6 @@ function Footer() {
                 <Link href="/purchase">{t("footer.rent.content.4")}</Link>
                 <Link href="/purchase">{t("footer.rent.content.5")}</Link>
                 <Link href="/purchase">{t("footer.rent.content.6")}</Link>
->>>>>>> dfb773796bde2be33d80631ffae31a4ec93613c7
               </div>
             </div>
             <div>
@@ -68,8 +56,7 @@ function Footer() {
               <div className={scss.line}></div>
               <div className={scss.content}>
                 
-<<<<<<< HEAD
-                <Link href="/list/purchase/apartments">Квартиры</Link>
+                {/* <Link href="/list/purchase/apartments">Квартиры</Link>
                 <Link href="/list/purchase/newBuildings">Новостройки</Link>
 
                 <Link href="/list/purchase/houses">Дома</Link>
@@ -78,8 +65,7 @@ function Footer() {
                 <Link href="/list/purchase/byOwner">Купить от собственника</Link>
                 <Link href="/list/purchase/realtor">Купить от риелтора</Link>
 
-                <Link href="/list/purchase/">Все объявления</Link>
-=======
+                <Link href="/list/purchase/">Все объявления</Link> */}
                 <Link href="/purchase">{t("footer.buy.content.0")}</Link>
                 <Link href="/purchase">{t("footer.buy.content.1")}</Link>
                 <Link href="/purchase">{t("footer.buy.content.2")}</Link>
@@ -88,24 +74,20 @@ function Footer() {
                 <Link href="/purchase">{t("footer.buy.content.4")}</Link>
                 <Link href="/purchase">{t("footer.buy.content.5")}</Link>
                 <Link href="/purchase">{t("footer.buy.content.6")}</Link>
->>>>>>> dfb773796bde2be33d80631ffae31a4ec93613c7
               </div>
             </div>
             <div>
               <h3>{t("footer.sell.name")}</h3>
               <div className={scss.line}></div>
               <div className={scss.content}>
-<<<<<<< HEAD
-              <Link href={`/list/${user}`}>Мои обьявления</Link>
-              <Link href="/management">Руководство для продавцов</Link>
-              <Link href="/asd">Найти риелтора</Link>
-=======
+              // <Link href={`/list/${user}`}>Мои обьявления</Link>
+              // <Link href="/management">Руководство для продавцов</Link>
+              // <Link href="/asd">Найти риелтора</Link>
               <Link href="/purchase">{t("footer.sell.content.0")}</Link>
               <Link href="/purchase">{t("footer.sell.content.1")}</Link>
               <Link href="/purchase">{t("footer.sell.content.2")}</Link>
 
 
->>>>>>> dfb773796bde2be33d80631ffae31a4ec93613c7
                 
               </div>
             </div>
@@ -118,6 +100,7 @@ function Footer() {
         </div>
     </div>
   )
+}
 }
 
 export default Footer
