@@ -14,12 +14,12 @@ function HomePage() {
   return (
     <div>
       <Header />
-      <Main />
+      <Main /> 
       <DiscountsBLock />
-      <CompBlock />
+       <CompBlock />
       <RieltorsBLock />
       <ServicesBlock />
-      <Footer />
+      <Footer /> 
     </div>
   );
 }

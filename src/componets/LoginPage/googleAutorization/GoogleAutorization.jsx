@@ -3,12 +3,16 @@ import scss from "./GoogleAutorization.module.scss";
 import Link from "next/link";
 import Title from "../title/Title";
 
-function GoogleAutorization() {
+function GoogleAutorization({ onNextStep }) {
+  const submit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className={scss.googleAutorization}>
       <img src="/assets/images/LoginPage/image 1.svg" alt="" />
       <Title title="Подтвердите свои данные" />
-      <form>
+      <form onSubmit={submit}>
         <div className={scss.form}>
           <div>
             <label>Имя</label>
@@ -24,9 +28,7 @@ function GoogleAutorization() {
           <input type="email" placeholder="ivanivanov@gmail.com " />
         </div>
         <div className={scss.link}>
-          <Link href="/">
-            <button className={scss.btn}>Далее</button>
-          </Link>
+            <button className={scss.btn} onClick={() => onNextStep("password")}>Далее</button>
           <Link href="/">
             <p>Вернуться назад</p>
           </Link>
