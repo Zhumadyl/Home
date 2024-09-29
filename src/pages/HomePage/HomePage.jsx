@@ -7,6 +7,9 @@ import ServicesBlock from "@/componets/HomePage/servicesBLock/ServicesBlock";
 import i18n from "@/i18next/i18next";
 import React, { useState } from "react";
 import CompBlock from "@/componets/HomePage/compBlock/compBlock";
+import TextareaCreatePage from "@/componets/TextAreaCreatePage/TextareaCreatePage";
+import PTCreatePage from "@/componets/PriceTermCreatePage/PTCreatePage";
+import GalleryCreatePage from "@/componets/GalleryCreatePage/GalleryCreatePage";
 
 function HomePage() {
   const { t } = i18n;
