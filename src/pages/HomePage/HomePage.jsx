@@ -5,11 +5,26 @@ import Header from "@/componets/HomePage/header/Header";
 import RieltorsBLock from "@/componets/HomePage/rieltorsBLock/RieltorsBLock";
 import ServicesBlock from "@/componets/HomePage/servicesBLock/ServicesBlock";
 import i18n from "@/i18next/i18next";
-import React, { useState } from "react";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { fetchTranslations } from "@/redux/asyncThunk";
+import { useState } from "react";
 import CompBlock from "@/componets/HomePage/compBlock/compBlock";
 import TextareaCreatePage from "@/componets/TextAreaCreatePage/TextareaCreatePage";
 import PTCreatePage from "@/componets/PriceTermCreatePage/PTCreatePage";
 import GalleryCreatePage from "@/componets/GalleryCreatePage/GalleryCreatePage";
+
+
+
+function HomePage() {
+  const { t } = i18n;
+  const [founderContent, setfounderContent] = useState('')
+
+    const dispatch = useDispatch()
+    useEffect(() => {
+      dispatch(fetchTranslations())
+    }, [])
+  
 
 function HomePage() {
   const { t } = i18n;
@@ -25,6 +40,7 @@ function HomePage() {
       <Footer /> 
     </div>
   );
+}
 }
 
 export default HomePage;
